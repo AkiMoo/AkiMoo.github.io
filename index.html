@@ -71,6 +71,75 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-2021.7.10 daily problem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/07/10/2021.7.10%20daily%20problem/" class="article-date">
+  <time class="dt-published" datetime="2021-07-10T04:05:33.000Z" itemprop="datePublished">2021-07-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2021/07/10/2021.7.10%20daily%20problem/">21-07-10 每日一题</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h4 id="981-基于时间的键值存储"><a href="#981-基于时间的键值存储" class="headerlink" title="981. 基于时间的键值存储"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/time-based-key-value-store/">981. 基于时间的键值存储</a></h4><p>难度中等96</p>
+<p>创建一个基于时间的键值存储类 <code>TimeMap</code>，它支持下面两个操作：</p>
+<p>\1. <code>set(string key, string value, int timestamp)</code></p>
+<ul>
+<li>存储键 <code>key</code>、值 <code>value</code>，以及给定的时间戳 <code>timestamp</code>。</li>
+</ul>
+<p>\2. <code>get(string key, int timestamp)</code></p>
+<ul>
+<li>返回先前调用 <code>set(key, value, timestamp_prev)</code> 所存储的值，其中 <code>timestamp_prev &lt;= timestamp</code>。</li>
+<li>如果有多个这样的值，则返回对应最大的 <code>timestamp_prev</code> 的那个值。</li>
+<li>如果没有值，则返回空字符串（<code>&quot;&quot;</code>）。</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">输入：inputs &#x3D; [&quot;TimeMap&quot;,&quot;set&quot;,&quot;get&quot;,&quot;get&quot;,&quot;set&quot;,&quot;get&quot;,&quot;get&quot;], inputs &#x3D; [[],[&quot;foo&quot;,&quot;bar&quot;,1],[&quot;foo&quot;,1],[&quot;foo&quot;,3],[&quot;foo&quot;,&quot;bar2&quot;,4],[&quot;foo&quot;,4],[&quot;foo&quot;,5]]</span><br><span class="line">输出：[null,null,&quot;bar&quot;,&quot;bar&quot;,null,&quot;bar2&quot;,&quot;bar2&quot;]</span><br><span class="line">解释：  </span><br><span class="line">TimeMap kv;   </span><br><span class="line">kv.set(&quot;foo&quot;, &quot;bar&quot;, 1); &#x2F;&#x2F; 存储键 &quot;foo&quot; 和值 &quot;bar&quot; 以及时间戳 timestamp &#x3D; 1   </span><br><span class="line">kv.get(&quot;foo&quot;, 1);  &#x2F;&#x2F; 输出 &quot;bar&quot;   </span><br><span class="line">kv.get(&quot;foo&quot;, 3); &#x2F;&#x2F; 输出 &quot;bar&quot; 因为在时间戳 3 和时间戳 2 处没有对应 &quot;foo&quot; 的值，所以唯一的值位于时间戳 1 处（即 &quot;bar&quot;）   </span><br><span class="line">kv.set(&quot;foo&quot;, &quot;bar2&quot;, 4);   </span><br><span class="line">kv.get(&quot;foo&quot;, 4); &#x2F;&#x2F; 输出 &quot;bar2&quot;   </span><br><span class="line">kv.get(&quot;foo&quot;, 5); &#x2F;&#x2F; 输出 &quot;bar2&quot;   </span><br></pre></td></tr></table></figure>
+<p><strong>示例 2：</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：inputs &#x3D; [&quot;TimeMap&quot;,&quot;set&quot;,&quot;set&quot;,&quot;get&quot;,&quot;get&quot;,&quot;get&quot;,&quot;get&quot;,&quot;get&quot;], inputs &#x3D; [[],[&quot;love&quot;,&quot;high&quot;,10],[&quot;love&quot;,&quot;low&quot;,20],[&quot;love&quot;,5],[&quot;love&quot;,10],[&quot;love&quot;,15],[&quot;love&quot;,20],[&quot;love&quot;,25]]</span><br><span class="line">输出：[null,null,null,&quot;&quot;,&quot;high&quot;,&quot;high&quot;,&quot;low&quot;,&quot;low&quot;]</span><br></pre></td></tr></table></figure>
+
+
+<p><strong>提示：</strong></p>
+<ol>
+<li>所有的键/值字符串都是小写的。</li>
+<li>所有的键/值字符串长度都在 <code>[1, 100]</code> 范围内。</li>
+<li>所有 <code>TimeMap.set</code> 操作中的时间戳 <code>timestamps</code> 都是严格递增的。</li>
+<li><code>1 &lt;= timestamp &lt;= 10^7</code></li>
+<li><code>TimeMap.set</code> 和 <code>TimeMap.get</code> 函数在每个测试用例中将（组合）调用总计 <code>120000</code> 次。</li>
+</ol>
+<h2 id="方法一：哈希表-查找"><a href="#方法一：哈希表-查找" class="headerlink" title="方法一：哈希表+查找"></a>方法一：哈希表+查找</h2><p>由于set 操作中的时间戳都是严格递增的，因此二元组列表中保存的时间戳也是严格递增的，这样我们可以根据 get 操作中的key 在哈希表中找到对应的二元组列表pairs，然后根据timestamp 在 pairs 中二分查找。我们需要找到最大的不超过 timestamp 的时间戳，对此，我们可以二分找到第一个超过 timestamp 的二元组下标 i，若 i&gt;0 则说明目标二元组存在，即pairs[i−1]，否则二元组不存在，返回空字符串。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TimeMap</span> &#123;</span></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    <span class="comment">/** Initialize your data structure here. */</span></span><br><span class="line">    <span class="built_in">unordered_map</span>&lt;<span class="built_in">string</span>, <span class="built_in">vector</span>&lt;<span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt;&gt;&gt; m;<span class="comment">//unordered_map建立二元组映射对</span></span><br><span class="line">    TimeMap() &#123;</span><br><span class="line"></span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">void</span> <span class="title">set</span><span class="params">(<span class="built_in">string</span> key, <span class="built_in">string</span> value, <span class="keyword">int</span> timestamp)</span> </span>&#123;</span><br><span class="line">        m[key].emplace_back(timestamp,value);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="built_in">string</span> <span class="title">get</span><span class="params">(<span class="built_in">string</span> key, <span class="keyword">int</span> timestamp)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">auto</span> &amp;pairs = m[key];</span><br><span class="line">        <span class="comment">// 使用一个大于所有 value 的字符串，以确保在 pairs 中含有 timestamp 的情况下也返回大于 timestamp 的位置</span></span><br><span class="line">        <span class="built_in">pair</span>&lt;<span class="keyword">int</span>, <span class="built_in">string</span>&gt; p = &#123;timestamp, <span class="built_in">string</span>(&#123;<span class="number">127</span>&#125;)&#125;;<span class="comment">//ASCII码不超过127，以上界来初始化</span></span><br><span class="line">        <span class="keyword">auto</span> i = upper_bound(pairs.begin(), pairs.end(), p);</span><br><span class="line">        <span class="keyword">if</span> (i != pairs.begin()) &#123;</span><br><span class="line">            <span class="keyword">return</span> (i - <span class="number">1</span>)-&gt;second;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">&quot;&quot;</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Your TimeMap object will be instantiated and called as such:</span></span><br><span class="line"><span class="comment"> * TimeMap* obj = new TimeMap();</span></span><br><span class="line"><span class="comment"> * obj-&gt;set(key,value,timestamp);</span></span><br><span class="line"><span class="comment"> * string param_2 = obj-&gt;get(key,timestamp);</span></span><br><span class="line"><span class="comment"> */</span></span><br></pre></td></tr></table></figure>
+<p>这道题，之前没怎么用过unordered_map；算是边看答案边理解做的，以后看到类似的题目要回来。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/07/10/2021.7.10%20daily%20problem/" data-id="ckqx91k5j0000ycuy7z34cm0g" data-title="21-07-10 每日一题" class="article-share-link">Share</a>
+      
+      
+      
+  <ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C/" rel="tag">C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/leetcode/" rel="tag">leetcode</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-2021.7.9 daily problem" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2021/07/09/2021.7.9%20daily%20problem/" class="article-date">
@@ -315,7 +384,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/C/" style="font-size: 10px;">C++</a> <a href="/tags/YUGIOH/" style="font-size: 10px;">YUGIOH</a> <a href="/tags/leetcode/" style="font-size: 10px;">leetcode</a>
+      <a href="/tags/C/" style="font-size: 20px;">C++</a> <a href="/tags/YUGIOH/" style="font-size: 10px;">YUGIOH</a> <a href="/tags/leetcode/" style="font-size: 20px;">leetcode</a>
     </div>
   </div>
 
@@ -335,6 +404,10 @@
     <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2021/07/10/2021.7.10%20daily%20problem/">21-07-10 每日一题</a>
+          </li>
         
           <li>
             <a href="/2021/07/09/2021.7.9%20daily%20problem/">21-07-09 每日一题</a>
