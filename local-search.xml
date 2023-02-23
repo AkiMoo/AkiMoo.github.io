@@ -4,6 +4,44 @@
   
   
   <entry>
+    <title>dailyProblem230223</title>
+    <link href="/2023/02/23/dailyProblem230223/"/>
+    <url>/2023/02/23/dailyProblem230223/</url>
+    
+    <content type="html"><![CDATA[<h4 id="1238-循环码排列"><a href="#1238-循环码排列" class="headerlink" title="1238. 循环码排列"></a><a href="https://leetcode.cn/problems/circular-permutation-in-binary-representation/">1238. 循环码排列</a></h4><p>难度中等</p><p>给你两个整数 <code>n</code> 和 <code>start</code>。你的任务是返回任意 <code>(0,1,2,,...,2^n-1)</code> 的排列 <code>p</code>，并且满足：</p><ul><li><code>p[0] = start</code></li><li><code>p[i]</code> 和 <code>p[i+1]</code> 的二进制表示形式只有一位不同</li><li><code>p[0]</code> 和 <code>p[2^n -1]</code> 的二进制表示形式也只有一位不同</li></ul><p><strong>示例 1：</strong></p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs dns">输入：n = <span class="hljs-number">2</span>, start = <span class="hljs-number">3</span><br>输出：[<span class="hljs-number">3,2,0,1</span>]<br>解释：这个排列的二进制表示是 (<span class="hljs-number">11,10,00,01</span>)<br>     所有的相邻元素都有一位是不同的，另一个有效的排列是 [<span class="hljs-number">3,1,0,2</span>]<br></code></pre></td></tr></table></figure><p><strong>示例 2：</strong></p><figure class="highlight dns"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs dns">输出：n = <span class="hljs-number">3</span>, start = <span class="hljs-number">2</span><br>输出：[<span class="hljs-number">2,6,7,5</span>,<span class="hljs-number">4,0,1,3</span>]<br>解释：这个排列的二进制表示是 (<span class="hljs-number">010,110,111</span>,<span class="hljs-number">101,100,000</span>,<span class="hljs-number">001,011</span>)<br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li><code>1 &lt;= n &lt;= 16</code></li><li><code>0 &lt;= start &lt; 2^n</code></li></ul><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>本质就是格雷编码。二进制编码转换格雷编码的公式为：i 异或 （i&gt;&gt;1) 。i为当前数组下标。</p><p>不过本题跟格雷编码的区别在于，格雷的初始要求是0，而题目是给定的start。</p><p>所以，要在之前求出格雷编码的情况下，与start进行一次异或。（每一个格雷码跟start异或都不会改变只有一位相差的性质，而一开始的格雷码是0，右移一位也是0，那么与start异或就是start本身了。）</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">circularPermutation</span><span class="hljs-params">(<span class="hljs-type">int</span> n, <span class="hljs-type">int</span> start)</span> </span>&#123;<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">ret</span><span class="hljs-params">(<span class="hljs-number">1</span> &lt;&lt; n)</span></span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; ret.<span class="hljs-built_in">size</span>(); i++) &#123;<br>            ret[i] = (i &gt;&gt; <span class="hljs-number">1</span>) ^ i ^ start;<br>        &#125;<br>        <span class="hljs-keyword">return</span> ret;<br>    &#125;<br>&#125;;<br><br><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>C++ Leetcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>CTCG-YUGIOH-REPORT</title>
+    <link href="/2023/02/20/CTCG-YUGIOH-REPORT/"/>
+    <url>/2023/02/20/CTCG-YUGIOH-REPORT/</url>
+    
+    <content type="html"><![CDATA[<h1 id="CTCG东莞站-深渊龙link-4-0-3-战报"><a href="#CTCG东莞站-深渊龙link-4-0-3-战报" class="headerlink" title="CTCG东莞站 深渊龙link 4-0-3 战报"></a>CTCG东莞站 深渊龙link 4-0-3 战报</h1><p>R1 VS珠泪哀歌族，🎲✔，OXX</p><p>G1能动，顺利做满对面投降。</p><p>G2起手只有鳞虫和萨隆魔龙两张手坑，对面一上来就是天魔世界跳芬里尔狼+塞壬丢古尖兵，古尖兵堆古卫兵。萨隆魔龙点梅洛对面飞红人鱼躲开继续展开，鳞虫点小美人鱼成功干扰但是被狼除外，终场对面有时潜+狼+哀唱。到我展开吃G对面墓地还有影依，投了。</p><p>G3先攻因为有龙谷先用黑白龙做了天球，扇区拉曳光中G，想着手里还有玛格，前场有天球就直接过了。然后对面拍天魔世界，天球弹完拉鸟龙兽。对面直接手拍芬里尔狼检索红人鱼，魔神王拿融合，通召宿神像跟手里魔神王和古尖兵融合，排连锁资源量直接打穿，无奈输。</p><p>R2 VS闪灵深渊兽，🎲✔，OO</p><p>G1先攻顺利做完，对面看完第六抽投降。</p><p>G2对面卡手盖烙印之兽过了，然后我一手展开牌，对面两个深渊兽交互质量不高，顺利拿下。</p><p>R3 VS神碑，🎲❌，OO</p><p>G1对面开穗先找泉，摇人出穆宁，微睡点穆宁，泉抽3被我用灰打断，盖2过。在我的准备阶段开了群雄割据+千查万别。我手牌有辉光龙混沌领域和赫界龙，决定直接找混源龙炸贴纸，之后成功展开做完白枪前托管住然后胜利。</p><p>G2对面做完穆宁+泉没盖卡，我手牌比较好，交互完之后都做了前托白枪，但是对面下回合有天岩户，还是顺利转起，还有set卡，然后我只能单前托beat，其中有一个回合对面用速攻喊完人因为紧张没用神碑之泉效果抽3，然后两回合没抽到神碑魔法被前托打死。</p><p>R4 VS俱舍怒威，🎲❌，XOX</p><p>G1起手2速攻旋转2赫界龙1装填龙，对面做满，有天魔世界+香格里拉+阿莱斯哈特+芬里尔狼，无得过直接投</p><p>G2对面丢G我丢灰，然后始枪龙吃了灰，手里拿着萨隆魔龙，盖魔毒+烙印之兽停牌，然后先开金谦out6吃灰，接着通召莱斯哈特先进BP打死始枪龙，然后先叫效果再开停泊地，我跳萨隆魔龙出场然后开魔毒炸了停泊地和手里的结界波。T3topdeck抽辉白龙，出场对面投降。</p><p>G3虽然起手2张叠光延迟，但是对面满中满：有天魔世界+香格里拉+阿莱斯哈特+芬里尔狼+电脑兽+停泊地+明牌六根清净，out了我前托还盖了2未知后场。抽阶要处理香格里拉只能双交叠光延迟弹阿莱斯哈特和香格里拉。赫界龙吃墓指，也都还行，用黑白龙和旋转运转用扇区拉场差突破，但没想到扇区竟然吃了宇宙旋风。。直接无晒资源投牌。。。</p><p>R5 VS珠泪哀歌，🎲❌，XOX</p><p>G1对面堆墓质量很高，我只丢了锁鸟，但墓地神官神像齐，还出了小米，深渊兽被露莎卡管住，突破失败投牌。</p><p>G2混沌轴+赫界龙展开，对面在我出了神兽之后再叫小美人鱼，被管住，然后跳红人鱼质量不高，我做完对面投牌。</p><p>G3无手坑对面做完：龙神王+露莎卡+深渊潜伏+哀唱+一手，混沌领域被龙神王管住，手里有深渊兽和复烙印，墓地有尖兵堆下去的鳞虫，因为被封墓效所以不能用路由龙找弹丸边，尝试用6+4出混沌双翼解场。于是玛格巨龙想出场被露莎卡管住，复烙印想着多拉鳞虫处理掉龙神王，结果就是因为忘记了封墓效导致没用好复烙印的复活（应该复活玛格巨龙逼哀唱，要么多一个续航要么可以成功解决哀唱），只有混沌双翼一个除去，点哀唱被哀唱无效，BP打死深渊潜伏M2出阿泽莉亚拆龙神王，然后过，结果对面神抽梅洛人鱼，配合哀唱融出卡雷多哈特直接摁死我，两个topdeck质量都低，无法返场，GAMELOST。</p><p>R6 轮空 O</p><p>R7 VS珠泪哀歌，🎲❌，OXO</p><p>对面估计没心机玩了。</p><p>G1用深渊兽交互一下对面只做露莎卡，后来被我做出前托就投了</p><p>G2对面塞壬丢古尖开堆，我丢了G他只做了露莎卡，但他手里有红人鱼和反击，我读错牌以为是哀唱没交宇宙旋风，被对面管死。</p><p>G3我做到一半对面就投降了。</p><h2 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h2><p>骰子运真的不行，而且后手基本抽不到有效交互牌，感觉就是差一点神助之力。</p><p>但是以往去打赛都没犯错，跟珠泪打细节还是太多，结果就是漏掉了关键的一着没复活玛格巨龙，否则说不定还不会止步第一天。不过就，我自认也认真去打这场比赛了，下次再努力吧。</p>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>yugioh</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>dailyProblem230220</title>
     <link href="/2023/02/20/dailyProblem230220/"/>
     <url>/2023/02/20/dailyProblem230220/</url>
