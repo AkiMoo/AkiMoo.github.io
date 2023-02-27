@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2357. 使数组中所有元素都等于零难度简单 给你一个非负整数数组 nums 。在一步操作中，你必须：  选出一个正整数 x ，x 需要小于或等于 nums 中 最小 的 非零 元素。 nums 中的每个正整数都减去 x。  返回使 nums 中所有元素都等于 0 需要的 最少 操作数。 示例 1： 123456输入：nums &#x3D; [1,5,0,3,5]输出：3解释：第一步操作：选出 x &#x3D; 1">
+    <meta name="description" content="献给阿尔吉侬的花束》 本周由于心情的和兴趣缺乏的缘故，无意中了解到了这本书，决定阅读。随手写写 跟一般书的标题不一样，虽然用阿尔吉侬命名，但阿尔吉侬在书中是一只白老鼠。 本作的主角是查理·高登，以为天生低智的男人。 他有着善良且努力学习的特质，因为他的与众不同才会被选上当人智提升计划的实验对象。 他接受实验之后逐渐变得比普通的聪明人更加聪明，但快速的智力成长和与之不匹配的心智让他对原来的世界产生了">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dailyProblem230224">
-<meta property="og:url" content="http://example.com/2023/02/24/dailyProblem230224/index.html">
+<meta property="og:title" content="FlowersForAlgernon">
+<meta property="og:url" content="http://example.com/2023/02/24/FlowersForAlgernon/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2357. 使数组中所有元素都等于零难度简单 给你一个非负整数数组 nums 。在一步操作中，你必须：  选出一个正整数 x ，x 需要小于或等于 nums 中 最小 的 非零 元素。 nums 中的每个正整数都减去 x。  返回使 nums 中所有元素都等于 0 需要的 最少 操作数。 示例 1： 123456输入：nums &#x3D; [1,5,0,3,5]输出：3解释：第一步操作：选出 x &#x3D; 1">
+<meta property="og:description" content="献给阿尔吉侬的花束》 本周由于心情的和兴趣缺乏的缘故，无意中了解到了这本书，决定阅读。随手写写 跟一般书的标题不一样，虽然用阿尔吉侬命名，但阿尔吉侬在书中是一只白老鼠。 本作的主角是查理·高登，以为天生低智的男人。 他有着善良且努力学习的特质，因为他的与众不同才会被选上当人智提升计划的实验对象。 他接受实验之后逐渐变得比普通的聪明人更加聪明，但快速的智力成长和与之不匹配的心智让他对原来的世界产生了">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-24T01:05:39.000Z">
-<meta property="article:modified_time" content="2023-02-24T01:11:51.655Z">
+<meta property="article:published_time" content="2023-02-24T10:13:19.000Z">
+<meta property="article:modified_time" content="2023-02-24T10:53:04.515Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="C++ Leetcode">
+<meta property="article:tag" content="Reading">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>dailyProblem230224 - Hexo</title>
+  <title>FlowersForAlgernon - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="dailyProblem230224"></span>
+            <span id="subtitle" data-typed-text="FlowersForAlgernon"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-24 09:05" pubdate>
-          2023年2月24日 上午
+        <time datetime="2023-02-24 18:13" pubdate>
+          2023年2月24日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          9 分钟
+          12 分钟
         
       </span>
     
@@ -268,37 +268,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">dailyProblem230224</h1>
+            <h1 style="display: none">FlowersForAlgernon</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="2357-使数组中所有元素都等于零"><a href="#2357-使数组中所有元素都等于零" class="headerlink" title="2357. 使数组中所有元素都等于零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/">2357. 使数组中所有元素都等于零</a></h4><p>难度简单</p>
-<p>给你一个非负整数数组 <code>nums</code> 。在一步操作中，你必须：</p>
-<ul>
-<li>选出一个正整数 <code>x</code> ，<code>x</code> 需要小于或等于 <code>nums</code> 中 <strong>最小</strong> 的 <strong>非零</strong> 元素。</li>
-<li><code>nums</code> 中的每个正整数都减去 <code>x</code>。</li>
-</ul>
-<p>返回使 <code>nums</code> 中所有元素都等于 <code>0</code> 需要的 <strong>最少</strong> 操作数。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：nums = <span class="hljs-string">[1,5,0,3,5]</span><br>输出：<span class="hljs-number">3</span><br>解释：<br>第一步操作：选出 x = <span class="hljs-number">1</span> ，之后 nums = <span class="hljs-string">[0,4,0,2,4]</span> 。<br>第二步操作：选出 x = <span class="hljs-number">2</span> ，之后 nums = <span class="hljs-string">[0,2,0,0,2]</span> 。<br>第三步操作：选出 x = <span class="hljs-number">2</span> ，之后 nums = <span class="hljs-string">[0,0,0,0,0]</span> 。<br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs abnf">输入：nums <span class="hljs-operator">=</span> [<span class="hljs-number">0</span>]<br>输出：<span class="hljs-number">0</span><br>解释：nums 中的每个元素都已经是 <span class="hljs-number">0</span> ，所以不需要执行任何操作。<br></code></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= nums.length &lt;= 100</code></li>
-<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
-</ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>简单题，一种方法是直接按照题意进行一次遍历，因为减操作是累积的，所以用一个minus变量记录当前已经减去多少，就不需要逐个位置去修改了。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minimumOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-built_in">sort</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> minus = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i&lt;nums.<span class="hljs-built_in">size</span>();i++)&#123;<br>            nums[i] += minus;<br>            <span class="hljs-keyword">if</span>(nums[i]&gt;<span class="hljs-number">0</span>)&#123;<br>                minus -= nums[i];<br>                cnt++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> cnt;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p>还有一种方法，从数学的角度出发，这个答案其实是求原数组有多少个不同的正整数。</p>
-<p>证明：</p>
-<p>假如不是的话，说明在某一次操作能将开始就不同的两个数同时抹零，但我们又知道每次减操作是所有数一同进行的，故两个开始就不同的数他们之间的差值在整个过程中都是固定的。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minimumOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        set&lt;<span class="hljs-type">int</span>&gt; hash;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i&lt;nums.<span class="hljs-built_in">size</span>();i++)&#123;<br>            <span class="hljs-keyword">if</span>(nums[i]&gt;<span class="hljs-number">0</span>)&#123;<br>                hash.<span class="hljs-built_in">insert</span>(nums[i]);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> hash.<span class="hljs-built_in">size</span>();<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
+                <p>献给阿尔吉侬的花束》</p>
+<p>本周由于心情的和兴趣缺乏的缘故，无意中了解到了这本书，决定阅读。随手写写</p>
+<p>跟一般书的标题不一样，虽然用阿尔吉侬命名，但阿尔吉侬在书中是一只白老鼠。</p>
+<p>本作的主角是查理·高登，以为天生低智的男人。</p>
+<p>他有着善良且努力学习的特质，因为他的与众不同才会被选上当人智提升计划的实验对象。</p>
+<p>他接受实验之后逐渐变得比普通的聪明人更加聪明，但快速的智力成长和与之不匹配的心智让他对原来的世界产生了不同的看法。他之前渴望被社会接纳渴望变聪明，但社会反馈给他的更多是欺辱和霸凌，而自己的母亲也无法接受自己的儿子是弱智的。</p>
+<p>查理看到了这一切之后，觉得这一切都是不可接受的，反而对弱势群体产生了更强的怜悯。</p>
+<p>而关于书中描写查理的情感和爱情，我个人认为这部分是勾勒出，他作为一个正常人，完整的生活必不可缺的元素，他渴望被爱，同时也想学会去爱。</p>
+<p>书中也表达了一个观点——无论你的智慧多么高超深邃，但如果缺少爱，那将毫无意义。</p>
+<p>这个观点可以从查理变聪明之后会变自大，目中无人看出，也可以是实验团队将查理看成是实验物品这个行为去提炼。</p>
+<p>查理在觉醒了智慧之后，明确了他是一个人，是一个个体，在拥有智慧的时候是，在进行手术前也是，所以他对整个实验会产生控诉，认为研究人员没有把他当作人，只是用来攫取名利的科学证据。但是在逐渐对世界产生认识的过程中他也开始理解自己存在的意义，在知道自己在不久的将来会退化之后马上着手写分析，希望能造福智障群体。</p>
+<p>在查理实验的全过程中，阿尔吉侬的存在是很重要的，他在显现智力的一开始非常抗拒与阿尔吉侬比赛，直至后来战胜这只小白鼠，我个人认为是自尊的一种觉醒。他也在体验世界的过程中发现这是他真正的好友，因为这只小白鼠跟他一样，都是实验对象，都经历了智力的觉醒和衰退。他在还清醒的时候一直会给阿尔吉侬的坟墓上放花，也在小说的最后，希望读到他写的报告的人也可以给阿尔吉侬献花。我个人认为这体现了对需要帮助群体的爱，以及查理在阿尔吉侬身上看到了自己，他不希望自己被大家遗忘，所以题目写《献给阿尔吉侬的花束》其实是双关的，同样也是，献给查理高登的花。</p>
+<blockquote>
+<p>任何有常识的人都会记得迷乱的眼睛可以区分为两类，而且是由两种原因造成的；不是自光明进入黑暗，就是自黑暗进入光明，这些心灵之眼与肉体之眼完全真实；记得这些事情的人，在见到眼神困惑而又微弱的人时，并不会因此而取笑这个人。首先，他会问这个人的灵魂是否自更光明的生活进入黑暗的生活，因为还不习惯黑暗而无法看见，或是刚自黑暗的生活进入光明的生活，由于太亮而目眩。因此，他会以所处的条件与生存环境判断别人是否快乐，然后，以此同情别人。或是，如果他对于一个从黑暗进入光明的灵魂产生取笑之心，那他就有更多的理由去取笑自光明返回黑暗洞穴的人。</p>
+</blockquote>
+<p>书中开头引用的这段柏拉图的话，其实是查理的人生缩影。</p>
+<p>他从无到有再到无，在无知的时候他没有执念，但是在从有到无的过程中他非常痛苦，他不想失去智慧和阅读写作的能力。换做我们自己也是一样的，在失去重视之物的时候也会想拼命挽留。实验的持续时间就像是命运，生命中有太多的东西不能由我们自己决定去留。凡人终究是会有执念，查理在几个月的实验经理，像是度过了相对完整的一生，希望我能在他的生活沉淀出更利好我成长的养分。</p>
 
                 
               </div>
@@ -311,7 +302,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/C-Leetcode/">#C++ Leetcode</a>
+        <a href="/tags/Reading/">#Reading</a>
       
     </div>
   
@@ -323,8 +314,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>dailyProblem230224</div>
-      <div>http://example.com/2023/02/24/dailyProblem230224/</div>
+      <div>FlowersForAlgernon</div>
+      <div>http://example.com/2023/02/24/FlowersForAlgernon/</div>
     </div>
     <div class="license-meta">
       
@@ -368,9 +359,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/24/FlowersForAlgernon/" title="FlowersForAlgernon">
+                      <a href="/2023/02/26/dailyProblem230226/" title="dailyProblem230226">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">FlowersForAlgernon</span>
+                        <span class="hidden-mobile">dailyProblem230226</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -378,8 +369,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/23/dailyProblem230223/" title="dailyProblem230223">
-                        <span class="hidden-mobile">dailyProblem230223</span>
+                      <a href="/2023/02/24/dailyProblem230224/" title="dailyProblem230224">
+                        <span class="hidden-mobile">dailyProblem230224</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>

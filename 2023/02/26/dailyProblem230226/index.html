@@ -1,0 +1,663 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="John Doe">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="1255. 得分最高的单词集合难度困难 你将会得到一份单词表 words，一个字母表 letters （可能会有重复字母），以及每个字母对应的得分情况表 score。 请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 letters 里的字母拼写出的 任意 属于 words 单词子集中，分数最高的单词集合的得分。 单词拼写游戏的规则概述如下：  玩家需要用字母表 letters 里的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="dailyProblem230226">
+<meta property="og:url" content="http://example.com/2023/02/26/dailyProblem230226/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="1255. 得分最高的单词集合难度困难 你将会得到一份单词表 words，一个字母表 letters （可能会有重复字母），以及每个字母对应的得分情况表 score。 请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 letters 里的字母拼写出的 任意 属于 words 单词子集中，分数最高的单词集合的得分。 单词拼写游戏的规则概述如下：  玩家需要用字母表 letters 里的">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-02-26T03:58:07.000Z">
+<meta property="article:modified_time" content="2023-02-26T04:03:27.571Z">
+<meta property="article:author" content="John Doe">
+<meta property="article:tag" content="C++ Leetcode">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>dailyProblem230226 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>Fluid</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="dailyProblem230226"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-02-26 11:58" pubdate>
+          2023年2月26日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          3.2k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          27 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">dailyProblem230226</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h4 id="1255-得分最高的单词集合"><a href="#1255-得分最高的单词集合" class="headerlink" title="1255. 得分最高的单词集合"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/maximum-score-words-formed-by-letters/">1255. 得分最高的单词集合</a></h4><p>难度困难</p>
+<p>你将会得到一份单词表 <code>words</code>，一个字母表 <code>letters</code> （可能会有重复字母），以及每个字母对应的得分情况表 <code>score</code>。</p>
+<p>请你帮忙计算玩家在单词拼写游戏中所能获得的「最高得分」：能够由 <code>letters</code> 里的字母拼写出的 <strong>任意</strong> 属于 <code>words</code> 单词子集中，分数最高的单词集合的得分。</p>
+<p>单词拼写游戏的规则概述如下：</p>
+<ul>
+<li>玩家需要用字母表 <code>letters</code> 里的字母来拼写单词表 <code>words</code> 中的单词。</li>
+<li>可以只使用字母表 <code>letters</code> 中的部分字母，但是每个字母最多被使用一次。</li>
+<li>单词表 <code>words</code> 中每个单词只能计分（使用）一次。</li>
+<li>根据字母得分情况表<code>score</code>，字母 <code>&#39;a&#39;</code>, <code>&#39;b&#39;</code>, <code>&#39;c&#39;</code>, … , <code>&#39;z&#39;</code> 对应的得分分别为 <code>score[0]</code>, <code>score[1]</code>, …, <code>score[25]</code>。</li>
+<li>本场游戏的「得分」是指：玩家所拼写出的单词集合里包含的所有字母的得分之和。</li>
+</ul>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros">输入：words = [<span class="hljs-string">&quot;dog&quot;</span>,<span class="hljs-string">&quot;cat&quot;</span>,<span class="hljs-string">&quot;dad&quot;</span>,<span class="hljs-string">&quot;good&quot;</span>], letters = [<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>,<span class="hljs-string">&quot;g&quot;</span>,<span class="hljs-string">&quot;o&quot;</span>,<span class="hljs-string">&quot;o&quot;</span>], score = [1,0,9,5,0,0,3,0,0,0,0,0,0,0,2,0,0,0,0,0,0,0,0,0,0,0]<br>输出：23<br>解释：<br>字母得分为  <span class="hljs-attribute">a</span>=1, <span class="hljs-attribute">c</span>=9, <span class="hljs-attribute">d</span>=5, <span class="hljs-attribute">g</span>=3, <span class="hljs-attribute">o</span>=2<br>使用给定的字母表 letters，我们可以拼写单词 <span class="hljs-string">&quot;dad&quot;</span> (5+1+5)和 <span class="hljs-string">&quot;good&quot;</span> (3+2+2+5)，得分为 23 。<br>而单词 <span class="hljs-string">&quot;dad&quot;</span> 和 <span class="hljs-string">&quot;dog&quot;</span> 只能得到 21 分。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs routeros">输入：words = [<span class="hljs-string">&quot;xxxz&quot;</span>,<span class="hljs-string">&quot;ax&quot;</span>,<span class="hljs-string">&quot;bx&quot;</span>,<span class="hljs-string">&quot;cx&quot;</span>], letters = [<span class="hljs-string">&quot;z&quot;</span>,<span class="hljs-string">&quot;a&quot;</span>,<span class="hljs-string">&quot;b&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;x&quot;</span>,<span class="hljs-string">&quot;x&quot;</span>,<span class="hljs-string">&quot;x&quot;</span>], score = [4,4,4,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,5,0,10]<br>输出：27<br>解释：<br>字母得分为  <span class="hljs-attribute">a</span>=4, <span class="hljs-attribute">b</span>=4, <span class="hljs-attribute">c</span>=4, <span class="hljs-attribute">x</span>=5, <span class="hljs-attribute">z</span>=10<br>使用给定的字母表 letters，我们可以组成单词 <span class="hljs-string">&quot;ax&quot;</span> (4+5)， <span class="hljs-string">&quot;bx&quot;</span> (4+5) 和 <span class="hljs-string">&quot;cx&quot;</span> (4+5) ，总得分为 27 。<br>单词 <span class="hljs-string">&quot;xxxz&quot;</span> 的得分仅为 25 。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 3：</strong></p>
+<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs prolog">输入：words = [<span class="hljs-string">&quot;leetcode&quot;</span>], letters = [<span class="hljs-string">&quot;l&quot;</span>,<span class="hljs-string">&quot;e&quot;</span>,<span class="hljs-string">&quot;t&quot;</span>,<span class="hljs-string">&quot;c&quot;</span>,<span class="hljs-string">&quot;o&quot;</span>,<span class="hljs-string">&quot;d&quot;</span>], score = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">1</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]<br>输出：<span class="hljs-number">0</span><br>解释：<br>字母 <span class="hljs-string">&quot;e&quot;</span> 在字母表 letters 中只出现了一次，所以无法组成单词表 words 中的单词。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>1 &lt;= words.length &lt;= 14</code></li>
+<li><code>1 &lt;= words[i].length &lt;= 15</code></li>
+<li><code>1 &lt;= letters.length &lt;= 100</code></li>
+<li><code>letters[i].length == 1</code></li>
+<li><code>score.length == 26</code></li>
+<li><code>0 &lt;= score[i] &lt;= 10</code></li>
+<li><code>words[i]</code> 和 <code>letters[i]</code> 只包含小写的英文字母。</li>
+</ul>
+<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>自己的想法是给每个单词赋分，然后遍历所有可能找出最高得分，但我觉得这个太笨，而且遍历的时候还要对letters数组数数，不是合理的解法，去看答案了。</p>
+<p>解题思路：<br>1，提供的字母集合，每个字母只能用一次<br>2，提供的单词集合，每个单词也只能用一次<br>3，单词集合的大小，1 &lt;&#x3D; words[i].length &lt;&#x3D; 15<br>4，枚举 words 子集总共 2^15 种情况<br>5，对每一种情况统计使用了哪些字母<br>        如果字母超出范围了，就不符合要求，否则按照字母表计算得分<br>        记录最大得分<br>位压缩：<br>1，对于单词集合中每一个词，都可以选择，用&#x2F;不用</p>
+<p>​	所以就可以用位 0&#x2F;1 来表示</p>
+<p>2，单词集合中每个单词都表示出来，总和就是 2的N次方种</p>
+<p>​	可以用 1 &lt;&lt; N 来表示</p>
+<p>3，当遍历到其中一个组合时，其数字的二进制位表示的就是各个单词的使用状态</p>
+<p>​	比如 5，二进制 101，代表第 0 个和第 2 个单词使用，第 1 个单词不使用</p>
+<p>4，检查时，对于第 i 个单词，使用 1 &lt;&lt; i，得到二进制除了第 i 位（顺序是从右至左）其余全 0 的数字</p>
+<p>​	比如第 2 个单词，1 &lt;&lt; 2 之后得到 4（二进制 100）</p>
+<p>5，再与状态位进行&amp;操作，得到是否使用<br>    4（二进制100）与刚才的 5（二进制101）&amp;操作，得到 true</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-comment">// 将第（bit）种组合情况，所使用的单词中的字母数量统计出来</span><br><span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">group</span><span class="hljs-params">(vector&lt;string&gt;&amp; words, <span class="hljs-type">int</span> bit)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">g</span><span class="hljs-params">(<span class="hljs-number">26</span>, <span class="hljs-number">0</span>)</span></span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; words.<span class="hljs-built_in">size</span>(); i++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (!(bit &amp; (<span class="hljs-number">1</span> &lt;&lt; i))) <span class="hljs-keyword">continue</span>;<br>        <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> c : words[i])<br>        &#123;<br>            g[c - <span class="hljs-string">&#x27;a&#x27;</span>]++;<br>        &#125;<br>    &#125;<br>    <span class="hljs-keyword">return</span> g;<br>&#125;<br><br><span class="hljs-comment">// 根据规则计算得分</span><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">calcScore</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; group, vector&lt;<span class="hljs-type">int</span>&gt;&amp; lettercnt, vector&lt;<span class="hljs-type">int</span>&gt;&amp; score)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-type">int</span> s = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>; j &lt; <span class="hljs-number">26</span>; j++)<br>    &#123;<br>        <span class="hljs-keyword">if</span> (lettercnt[j] &lt; group[j]) <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        s += group[j] * score[j];<br>    &#125;<br>    <span class="hljs-keyword">return</span> s;<br>&#125;<br><br><span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">maxScoreWords</span><span class="hljs-params">(vector&lt;string&gt;&amp; words, vector&lt;<span class="hljs-type">char</span>&gt;&amp; letters, vector&lt;<span class="hljs-type">int</span>&gt;&amp; score)</span></span><br><span class="hljs-function"></span>&#123;<br>    <span class="hljs-comment">// 统计给出的字母的数量</span><br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">lettercnt</span><span class="hljs-params">(<span class="hljs-number">26</span>, <span class="hljs-number">0</span>)</span></span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-keyword">auto</span> c : letters)<br>    &#123;<br>        lettercnt[c - <span class="hljs-string">&#x27;a&#x27;</span>]++;<br>    &#125;<br>    <br>    <span class="hljs-type">int</span> ans = <span class="hljs-number">0</span>;<br>    <span class="hljs-keyword">for</span> (<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i &lt; (<span class="hljs-number">1</span> &lt;&lt; words.<span class="hljs-built_in">size</span>()); i++)<br>    &#123;<br>        <span class="hljs-keyword">auto</span> g = <span class="hljs-built_in">group</span>(words, i);<br>        ans = <span class="hljs-built_in">max</span>(ans, <span class="hljs-built_in">calcScore</span>(g, lettercnt, score));<br>    &#125;<br>    <span class="hljs-keyword">return</span> ans;<br>&#125;<br><br>&#125;;<br><br></code></pre></td></tr></table></figure>
+
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/C-Leetcode/">#C++ Leetcode</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>dailyProblem230226</div>
+      <div>http://example.com/2023/02/26/dailyProblem230226/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>John Doe</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年2月26日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/02/27/dailyProblem230227/" title="dailyProblem230227">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">dailyProblem230227</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/02/24/FlowersForAlgernon/" title="FlowersForAlgernon">
+                        <span class="hidden-mobile">FlowersForAlgernon</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>

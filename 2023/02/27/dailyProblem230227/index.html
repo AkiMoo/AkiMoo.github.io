@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2357. 使数组中所有元素都等于零难度简单 给你一个非负整数数组 nums 。在一步操作中，你必须：  选出一个正整数 x ，x 需要小于或等于 nums 中 最小 的 非零 元素。 nums 中的每个正整数都减去 x。  返回使 nums 中所有元素都等于 0 需要的 最少 操作数。 示例 1： 123456输入：nums &#x3D; [1,5,0,3,5]输出：3解释：第一步操作：选出 x &#x3D; 1">
+    <meta name="description" content="1144. 递减元素使数组呈锯齿状难度中等 给你一个整数数组 nums，每次 操作 会从中选择一个元素并 将该元素的值减少 1。 如果符合下列情况之一，则数组 A 就是 锯齿数组：  每个偶数索引对应的元素都大于相邻的元素，即 A[0] &gt; A[1] &lt; A[2] &gt; A[3] &lt; A[4] &gt; ... 或者，每个奇数索引对应的元素都大于相邻的元素，即 A[0] &amp;l">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dailyProblem230224">
-<meta property="og:url" content="http://example.com/2023/02/24/dailyProblem230224/index.html">
+<meta property="og:title" content="dailyProblem230227">
+<meta property="og:url" content="http://example.com/2023/02/27/dailyProblem230227/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="2357. 使数组中所有元素都等于零难度简单 给你一个非负整数数组 nums 。在一步操作中，你必须：  选出一个正整数 x ，x 需要小于或等于 nums 中 最小 的 非零 元素。 nums 中的每个正整数都减去 x。  返回使 nums 中所有元素都等于 0 需要的 最少 操作数。 示例 1： 123456输入：nums &#x3D; [1,5,0,3,5]输出：3解释：第一步操作：选出 x &#x3D; 1">
+<meta property="og:description" content="1144. 递减元素使数组呈锯齿状难度中等 给你一个整数数组 nums，每次 操作 会从中选择一个元素并 将该元素的值减少 1。 如果符合下列情况之一，则数组 A 就是 锯齿数组：  每个偶数索引对应的元素都大于相邻的元素，即 A[0] &gt; A[1] &lt; A[2] &gt; A[3] &lt; A[4] &gt; ... 或者，每个奇数索引对应的元素都大于相邻的元素，即 A[0] &amp;l">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-02-24T01:05:39.000Z">
-<meta property="article:modified_time" content="2023-02-24T01:11:51.655Z">
+<meta property="article:published_time" content="2023-02-27T13:36:59.000Z">
+<meta property="article:modified_time" content="2023-02-27T13:41:50.542Z">
 <meta property="article:author" content="John Doe">
 <meta property="article:tag" content="C++ Leetcode">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>dailyProblem230224 - Hexo</title>
+  <title>dailyProblem230227 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="dailyProblem230224"></span>
+            <span id="subtitle" data-typed-text="dailyProblem230227"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-02-24 09:05" pubdate>
-          2023年2月24日 上午
+        <time datetime="2023-02-27 21:36" pubdate>
+          2023年2月27日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.1k 字
+          1.5k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          9 分钟
+          13 分钟
         
       </span>
     
@@ -268,36 +268,36 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">dailyProblem230224</h1>
+            <h1 style="display: none">dailyProblem230227</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="2357-使数组中所有元素都等于零"><a href="#2357-使数组中所有元素都等于零" class="headerlink" title="2357. 使数组中所有元素都等于零"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/make-array-zero-by-subtracting-equal-amounts/">2357. 使数组中所有元素都等于零</a></h4><p>难度简单</p>
-<p>给你一个非负整数数组 <code>nums</code> 。在一步操作中，你必须：</p>
+                <h4 id="1144-递减元素使数组呈锯齿状"><a href="#1144-递减元素使数组呈锯齿状" class="headerlink" title="1144. 递减元素使数组呈锯齿状"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/decrease-elements-to-make-array-zigzag/">1144. 递减元素使数组呈锯齿状</a></h4><p>难度中等</p>
+<p>给你一个整数数组 <code>nums</code>，每次 <strong>操作</strong> 会从中选择一个元素并 <strong>将该元素的值减少 1</strong>。</p>
+<p>如果符合下列情况之一，则数组 <code>A</code> 就是 <strong>锯齿数组</strong>：</p>
 <ul>
-<li>选出一个正整数 <code>x</code> ，<code>x</code> 需要小于或等于 <code>nums</code> 中 <strong>最小</strong> 的 <strong>非零</strong> 元素。</li>
-<li><code>nums</code> 中的每个正整数都减去 <code>x</code>。</li>
+<li>每个偶数索引对应的元素都大于相邻的元素，即 <code>A[0] &gt; A[1] &lt; A[2] &gt; A[3] &lt; A[4] &gt; ...</code></li>
+<li>或者，每个奇数索引对应的元素都大于相邻的元素，即 <code>A[0] &lt; A[1] &gt; A[2] &lt; A[3] &gt; A[4] &lt; ...</code></li>
 </ul>
-<p>返回使 <code>nums</code> 中所有元素都等于 <code>0</code> 需要的 <strong>最少</strong> 操作数。</p>
+<p>返回将数组 <code>nums</code> 转换为锯齿数组所需的最小操作次数。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：nums = <span class="hljs-string">[1,5,0,3,5]</span><br>输出：<span class="hljs-number">3</span><br>解释：<br>第一步操作：选出 x = <span class="hljs-number">1</span> ，之后 nums = <span class="hljs-string">[0,4,0,2,4]</span> 。<br>第二步操作：选出 x = <span class="hljs-number">2</span> ，之后 nums = <span class="hljs-string">[0,2,0,0,2]</span> 。<br>第三步操作：选出 x = <span class="hljs-number">2</span> ，之后 nums = <span class="hljs-string">[0,0,0,0,0]</span> 。<br></code></pre></td></tr></table></figure>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs tap">输入：nums = [1,2,3]<br>输出：2<br>解释：我们可以把<span class="hljs-number"> 2 </span>递减到 0，或把<span class="hljs-number"> 3 </span>递减到 1。<br></code></pre></td></tr></table></figure>
 
 <p><strong>示例 2：</strong></p>
-<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs abnf">输入：nums <span class="hljs-operator">=</span> [<span class="hljs-number">0</span>]<br>输出：<span class="hljs-number">0</span><br>解释：nums 中的每个元素都已经是 <span class="hljs-number">0</span> ，所以不需要执行任何操作。<br></code></pre></td></tr></table></figure>
+<figure class="highlight accesslog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs accesslog">输入：nums = <span class="hljs-string">[9,6,1,6,2]</span><br>输出：<span class="hljs-number">4</span><br></code></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
 <ul>
-<li><code>1 &lt;= nums.length &lt;= 100</code></li>
-<li><code>0 &lt;= nums[i] &lt;= 100</code></li>
+<li><code>1 &lt;= nums.length &lt;= 1000</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 1000</code></li>
 </ul>
-<h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>简单题，一种方法是直接按照题意进行一次遍历，因为减操作是累积的，所以用一个minus变量记录当前已经减去多少，就不需要逐个位置去修改了。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minimumOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-built_in">sort</span>(nums.<span class="hljs-built_in">begin</span>(), nums.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-type">int</span> cnt = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> minus = <span class="hljs-number">0</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i&lt;nums.<span class="hljs-built_in">size</span>();i++)&#123;<br>            nums[i] += minus;<br>            <span class="hljs-keyword">if</span>(nums[i]&gt;<span class="hljs-number">0</span>)&#123;<br>                minus -= nums[i];<br>                cnt++;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> cnt;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
-<p>还有一种方法，从数学的角度出发，这个答案其实是求原数组有多少个不同的正整数。</p>
-<p>证明：</p>
-<p>假如不是的话，说明在某一次操作能将开始就不同的两个数同时抹零，但我们又知道每次减操作是所有数一同进行的，故两个开始就不同的数他们之间的差值在整个过程中都是固定的。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minimumOperations</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        set&lt;<span class="hljs-type">int</span>&gt; hash;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>; i&lt;nums.<span class="hljs-built_in">size</span>();i++)&#123;<br>            <span class="hljs-keyword">if</span>(nums[i]&gt;<span class="hljs-number">0</span>)&#123;<br>                hash.<span class="hljs-built_in">insert</span>(nums[i]);<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> hash.<span class="hljs-built_in">size</span>();<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>可能还是对动态规划不熟？一开始在想要怎么安排规划，后来没想到状态方程只好作罢。</p>
+<p>再次读题目，要求是奇数位都比偶数位大或者偶数位都比奇数位大，而可以进行的操作只能是减操作。</p>
+<p>令操作数最少肯定是只改奇数位或者只改偶数位，既然如此，那就分奇偶两次分别遍历计数，然后选出最小的那个数。</p>
+<p>途中修改了代码逻辑很多次，还是不够专注或者不够熟练，尝试每天都花一个小时的专注时间优先解决问题再做其他事情。</p>
+<p>（从数据上来说似乎不是好解法）</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">movesToMakeZigzag</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> ans1=<span class="hljs-number">0</span>,ans2=<span class="hljs-number">0</span>,n=nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">if</span>(n&lt;=<span class="hljs-number">2</span>)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<span class="hljs-comment">//修改奇数位</span><br>            <span class="hljs-keyword">if</span>(i==n<span class="hljs-number">-1</span>)&#123;<span class="hljs-comment">//防越界</span><br>                <span class="hljs-keyword">if</span>(i%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>)&#123;<br>                    <span class="hljs-keyword">if</span>(nums[i]&gt;=nums[i<span class="hljs-number">-1</span>])&#123;<br>                        ans1+=(nums[i]-nums[i<span class="hljs-number">-1</span>]+<span class="hljs-number">1</span>);<br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i%<span class="hljs-number">2</span>==<span class="hljs-number">1</span>)&#123;<br>                <span class="hljs-keyword">if</span>(nums[i]&gt;=nums[i<span class="hljs-number">-1</span>]||nums[i]&gt;=nums[i+<span class="hljs-number">1</span>])&#123;<br>                    ans1+=(nums[i]-<span class="hljs-built_in">min</span>(nums[i<span class="hljs-number">-1</span>],nums[i+<span class="hljs-number">1</span>])+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(nums[<span class="hljs-number">0</span>]&gt;=nums[<span class="hljs-number">1</span>])&#123;<span class="hljs-comment">//第一位的特殊判断</span><br>            ans2+=(nums[<span class="hljs-number">0</span>]-nums[<span class="hljs-number">1</span>]+<span class="hljs-number">1</span>);<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;n;i++)&#123;<span class="hljs-comment">//修改偶数位</span><br>            <span class="hljs-keyword">if</span>(i==n<span class="hljs-number">-1</span>)&#123;<span class="hljs-comment">//防越界</span><br>                <span class="hljs-keyword">if</span>(i%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>)&#123;<br>                    <span class="hljs-keyword">if</span>(nums[i]&gt;=nums[i<span class="hljs-number">-1</span>])&#123;<br>                        ans2+=(nums[i]-nums[i<span class="hljs-number">-1</span>]+<span class="hljs-number">1</span>);<br>                    &#125;<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(i%<span class="hljs-number">2</span>==<span class="hljs-number">0</span>)&#123;<br>                <span class="hljs-keyword">if</span>(nums[i]&gt;=nums[i<span class="hljs-number">-1</span>]||nums[i]&gt;=nums[i+<span class="hljs-number">1</span>])&#123;<br>                    ans2+=(nums[i]-<span class="hljs-built_in">min</span>(nums[i<span class="hljs-number">-1</span>],nums[i+<span class="hljs-number">1</span>])+<span class="hljs-number">1</span>);<br>                &#125;<br>            &#125;<br>        &#125;<br>        cout&lt;&lt;ans1&lt;&lt;<span class="hljs-string">&quot; &quot;</span>&lt;&lt;ans2;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(ans1,ans2);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
 
                 
@@ -323,8 +323,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>dailyProblem230224</div>
-      <div>http://example.com/2023/02/24/dailyProblem230224/</div>
+      <div>dailyProblem230227</div>
+      <div>http://example.com/2023/02/27/dailyProblem230227/</div>
     </div>
     <div class="license-meta">
       
@@ -336,7 +336,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2023年2月24日</div>
+          <div>2023年2月27日</div>
         </div>
       
       
@@ -368,18 +368,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/02/24/FlowersForAlgernon/" title="FlowersForAlgernon">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">FlowersForAlgernon</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/02/23/dailyProblem230223/" title="dailyProblem230223">
-                        <span class="hidden-mobile">dailyProblem230223</span>
+                      <a href="/2023/02/26/dailyProblem230226/" title="dailyProblem230226">
+                        <span class="hidden-mobile">dailyProblem230226</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
