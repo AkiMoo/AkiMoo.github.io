@@ -4,6 +4,25 @@
   
   
   <entry>
+    <title>dailyProblem230302</title>
+    <link href="/2023/03/02/dailyProblem230302/"/>
+    <url>/2023/03/02/dailyProblem230302/</url>
+    
+    <content type="html"><![CDATA[<h4 id="面试题-05-02-二进制数转字符串"><a href="#面试题-05-02-二进制数转字符串" class="headerlink" title="面试题 05.02. 二进制数转字符串"></a><a href="https://leetcode.cn/problems/bianry-number-to-string-lcci/">面试题 05.02. 二进制数转字符串</a></h4><p>难度中等</p><p>二进制数转字符串。给定一个介于0和1之间的实数（如0.72），类型为double，打印它的二进制表达式。如果该数字无法精确地用32位以内的二进制表示，则打印“ERROR”。</p><p><strong>示例1:</strong></p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs 1c">输入：<span class="hljs-number">0.625</span><br>输出：<span class="hljs-string">&quot;0.101&quot;</span><br></code></pre></td></tr></table></figure><p><strong>示例2:</strong></p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs 1c">输入：<span class="hljs-number">0.1</span><br>输出：<span class="hljs-string">&quot;ERROR&quot;</span><br>提示：<span class="hljs-number">0.1</span>无法被二进制准确表示<br></code></pre></td></tr></table></figure><p><strong>提示：</strong></p><ul><li>32位包括输出中的 <code>&quot;0.&quot;</code> 这两位。</li><li>题目保证输入用例的小数位数最多只有 <code>6</code> 位</li></ul><h2 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h2><p>不难，按照题目的意思直接去按位操作就好。</p><p>一开始没想到的地方是如何判断不能被二进制准确表示，后来再看一次题目想到：只要32位之内都没把它转换成功就可以输出ERROR了。</p><p>要做的操作就是：</p><p>1，每次把num乘以2，然后取整数，再用num减去这个整数部分 &#x2F;&#x2F;是十进制小数转二进制的操作</p><p>2，如果num减至0或者字符串长度超32，就停止</p><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">string <span class="hljs-title">printBin</span><span class="hljs-params">(<span class="hljs-type">double</span> num)</span> </span>&#123;<br>        string ans=<span class="hljs-string">&quot;0.&quot;</span>;<br>        <span class="hljs-keyword">while</span>(ans.<span class="hljs-built_in">length</span>()&lt;=<span class="hljs-number">32</span>&amp;&amp;num!=<span class="hljs-number">0</span>)&#123;<br>            num *=<span class="hljs-number">2</span>;<br>            <span class="hljs-type">int</span> bit = num;<span class="hljs-comment">//只取整数部分，按照整数部分的0/1情况添0/1</span><br>            num -= bit;<br>            ans+=(<span class="hljs-string">&#x27;0&#x27;</span>+bit);<br>        &#125;<br>        <span class="hljs-keyword">if</span>(num!=<span class="hljs-number">0</span>)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-string">&quot;ERROR&quot;</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">return</span> ans;<br>        &#125;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>C++, Leetcode</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>dailyProblem230227</title>
     <link href="/2023/02/27/dailyProblem230227/"/>
     <url>/2023/02/27/dailyProblem230227/</url>
