@@ -16,21 +16,21 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="dailyProblem 202401242808. 使循环数组所有元素相等的最少秒数给你一个下标从 0 开始长度为 n 的数组 nums 。 每一秒，你可以对数组执行以下操作： 对于范围在 [0, n - 1] 内的每一个下标 i ，将 nums[i] 替换成 nums[i] ，nums[(i - 1 + n) % n] 或者 nums[(i + 1) % n] 三者之一。注意，所有元素会被同时">
+    <meta name="description" content="dailyProblem202401312670. 找出不同元素数目差数组给你一个下标从 0 开始的数组 nums ，数组长度为 n 。 nums 的 不同元素数目差 数组可以用一个长度为 n 的数组 diff 表示，其中 diff[i] 等于前缀 nums[0, …, i] 中不同元素的数目 减去 后缀 nums[i + 1, …, n - 1] 中不同元素的数目。 返回 nums 的 不同元素">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dailyProblem20240130">
-<meta property="og:url" content="http://example.com/2024/01/30/dailyProblem20240130/index.html">
+<meta property="og:title" content="dailyProblem20240131">
+<meta property="og:url" content="http://example.com/2024/01/31/dailyProblem20240131/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="dailyProblem 202401242808. 使循环数组所有元素相等的最少秒数给你一个下标从 0 开始长度为 n 的数组 nums 。 每一秒，你可以对数组执行以下操作： 对于范围在 [0, n - 1] 内的每一个下标 i ，将 nums[i] 替换成 nums[i] ，nums[(i - 1 + n) % n] 或者 nums[(i + 1) % n] 三者之一。注意，所有元素会被同时">
+<meta property="og:description" content="dailyProblem202401312670. 找出不同元素数目差数组给你一个下标从 0 开始的数组 nums ，数组长度为 n 。 nums 的 不同元素数目差 数组可以用一个长度为 n 的数组 diff 表示，其中 diff[i] 等于前缀 nums[0, …, i] 中不同元素的数目 减去 后缀 nums[i + 1, …, n - 1] 中不同元素的数目。 返回 nums 的 不同元素">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-30T07:11:57.000Z">
-<meta property="article:modified_time" content="2024-01-30T07:26:24.762Z">
+<meta property="article:published_time" content="2024-01-31T03:44:02.000Z">
+<meta property="article:modified_time" content="2024-01-31T03:59:14.529Z">
 <meta property="article:author" content="John Doe">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>dailyProblem20240130 - Hexo</title>
+  <title>dailyProblem20240131 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -195,7 +195,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="dailyProblem20240130"></span>
+            <span id="subtitle" data-typed-text="dailyProblem20240131"></span>
           
         </div>
 
@@ -206,8 +206,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-30 15:11" pubdate>
-          2024年1月30日 下午
+        <time datetime="2024-01-31 11:44" pubdate>
+          2024年1月31日 中午
         </time>
       </span>
     
@@ -218,7 +218,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.8k 字
+          2.2k 字
         
       </span>
     
@@ -229,7 +229,7 @@
         
         
         
-          16 分钟
+          19 分钟
         
       </span>
     
@@ -267,73 +267,31 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">dailyProblem20240130</h1>
+            <h1 style="display: none">dailyProblem20240131</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="dailyProblem-20240124"><a href="#dailyProblem-20240124" class="headerlink" title="dailyProblem 20240124"></a>dailyProblem 20240124</h1><h2 id="2808-使循环数组所有元素相等的最少秒数"><a href="#2808-使循环数组所有元素相等的最少秒数" class="headerlink" title="2808. 使循环数组所有元素相等的最少秒数"></a>2808. 使循环数组所有元素相等的最少秒数</h2><p>给你一个下标从 0 开始长度为 n 的数组 nums 。</p>
-<p>每一秒，你可以对数组执行以下操作：</p>
-<p>对于范围在 [0, n - 1] 内的每一个下标 i ，将 nums[i] 替换成 nums[i] ，nums[(i - 1 + n) % n] 或者 nums[(i + 1) % n] 三者之一。<br>注意，所有元素会被同时替换。</p>
-<p>请你返回将数组 nums 中所有元素变成相等元素所需要的 最少 秒数。</p>
+                <h1 id="dailyProblem20240131"><a href="#dailyProblem20240131" class="headerlink" title="dailyProblem20240131"></a>dailyProblem20240131</h1><h2 id="2670-找出不同元素数目差数组"><a href="#2670-找出不同元素数目差数组" class="headerlink" title="2670. 找出不同元素数目差数组"></a>2670. 找出不同元素数目差数组</h2><p>给你一个下标从 0 开始的数组 nums ，数组长度为 n 。</p>
+<p>nums 的 不同元素数目差 数组可以用一个长度为 n 的数组 diff 表示，其中 diff[i] 等于前缀 nums[0, …, i] 中不同元素的数目 减去 后缀 nums[i + 1, …, n - 1] 中不同元素的数目。</p>
+<p>返回 nums 的 不同元素数目差 数组。</p>
+<p>注意 nums[i, …, j] 表示 nums 的一个从下标 i 开始到下标 j 结束的子数组（包含下标 i 和 j 对应元素）。特别需要说明的是，如果 i &gt; j ，则 nums[i, …, j] 表示一个空子数组。</p>
 <p>示例 1：</p>
-<p>输入：nums &#x3D; [1,2,1,2]</p>
-<p>输出：1</p>
-<p>解释：我们可以在 1 秒内将数组变成相等元素：</p>
-<ul>
-<li>第 1 秒，将每个位置的元素分别变为 [nums[3],nums[1],nums[3],nums[3]] 。变化后，nums &#x3D; [2,2,2,2] 。<br>1 秒是将数组变成相等元素所需要的最少秒数。</li>
-</ul>
+<p>输入：nums &#x3D; [1,2,3,4,5]</p>
+<p>输出：[-3,-1,1,3,5]</p>
+<p>解释：<br>对于 i &#x3D; 0，前缀中有 1 个不同的元素，而在后缀中有 4 个不同的元素。因此，diff[0] &#x3D; 1 - 4 &#x3D; -3 。<br>对于 i &#x3D; 1，前缀中有 2 个不同的元素，而在后缀中有 3 个不同的元素。因此，diff[1] &#x3D; 2 - 3 &#x3D; -1 。<br>对于 i &#x3D; 2，前缀中有 3 个不同的元素，而在后缀中有 2 个不同的元素。因此，diff[2] &#x3D; 3 - 2 &#x3D; 1 。<br>对于 i &#x3D; 3，前缀中有 4 个不同的元素，而在后缀中有 1 个不同的元素。因此，diff[3] &#x3D; 4 - 1 &#x3D; 3 。<br>对于 i &#x3D; 4，前缀中有 5 个不同的元素，而在后缀中有 0 个不同的元素。因此，diff[4] &#x3D; 5 - 0 &#x3D; 5 。</p>
 <p>示例 2：</p>
-<p>输入：nums &#x3D; [2,1,3,3,2]</p>
-<p>输出：2</p>
-<p>解释：我们可以在 2 秒内将数组变成相等元素：</p>
-<ul>
-<li>第 1 秒，将每个位置的元素分别变为 [nums[0],nums[2],nums[2],nums[2],nums[3]] 。变化后，nums &#x3D; [2,3,3,3,3] 。</li>
-<li>第 2 秒，将每个位置的元素分别变为 [nums[1],nums[1],nums[2],nums[3],nums[4]] 。变化后，nums &#x3D; [3,3,3,3,3] 。<br>2 秒是将数组变成相等元素所需要的最少秒数。</li>
-</ul>
-<p>示例 3：</p>
-<p>输入：nums &#x3D; [5,5,5,5]</p>
-<p>输出：0</p>
-<p>解释：不需要执行任何操作，因为一开始数组中的元素已经全部相等。</p>
+<p>输入：nums &#x3D; [3,2,3,4,2]</p>
+<p>输出：[-2,-1,0,2,3]</p>
+<p>解释：<br>对于 i &#x3D; 0，前缀中有 1 个不同的元素，而在后缀中有 3 个不同的元素。因此，diff[0] &#x3D; 1 - 3 &#x3D; -2 。<br>对于 i &#x3D; 1，前缀中有 2 个不同的元素，而在后缀中有 3 个不同的元素。因此，diff[1] &#x3D; 2 - 3 &#x3D; -1 。<br>对于 i &#x3D; 2，前缀中有 2 个不同的元素，而在后缀中有 2 个不同的元素。因此，diff[2] &#x3D; 2 - 2 &#x3D; 0 。<br>对于 i &#x3D; 3，前缀中有 3 个不同的元素，而在后缀中有 1 个不同的元素。因此，diff[3] &#x3D; 3 - 1 &#x3D; 2 。<br>对于 i &#x3D; 4，前缀中有 3 个不同的元素，而在后缀中有 0 个不同的元素。因此，diff[4] &#x3D; 3 - 0 &#x3D; 3 。 </p>
 <p>提示：</p>
-<p>1 &lt;&#x3D; n &#x3D;&#x3D; nums.length &lt;&#x3D; 10^5</p>
-<p>1 &lt;&#x3D; nums[i] &lt;&#x3D; 10^9</p>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>加起来折腾了三个多小时，有点羞耻。</p>
-<p>一开始的想法是，次数最少肯定要全部数字变成出现最频繁的数（记为mark）。所以就往这个方向写了。</p>
-<p>最初的方法是check每轮中，nums[i]前后的数字是否为mark，并且不能在当轮check完马上改变数值，所以还加了visitor数组去实现。</p>
-<p>然后问题来了，最频繁多的数有多个，这样要如何选呢？没有判别标准，所以将数数功能外置成一个函数（这样就可以保留原来的nums数组）。折腾了一阵也实现了。</p>
-<p>然后出现了一个例子[1, 11, 11, 11, 19, 12, 8, 7, 19]。告诉我从一开始的想法就不对。</p>
-<p>于是观察了这个数组的形状，解法应该是检查相同数相邻的距离。即以每一个数作为原点，像水波一样往左右扩散，直至碰到与自身相同的数。那么最少的轮次，（选定某一个数后）就是这个数与相同数相邻隔的最远距离除以二（最远相邻才可以保证全部数都被覆盖到）。</p>
-<p>这个方法是需要检查所有数并记录它们出现的位置，使用unordered_map辅助记录。</p>
-<pre><code class="cpp">class Solution &#123;
-public:
-    int minimumSeconds(vector&lt;int&gt;&amp; nums) &#123;
-        unordered_map&lt;int,vector&lt;int&gt;&gt; hash;
-        int mark=0,n=nums.size();
-        int ans=INT_MAX;
-        for(int i=0;i&lt;n;i++)&#123;
-            hash[nums[i]].push_back(i);
-        &#125;
-        for(auto pos:hash)&#123;
-            int m = pos.second[0] + n - pos.second.back();
-            for(int j = 1;j&lt;pos.second.size();j++)&#123;
-                m = max(m,pos.second[j]-pos.second[j-1]);
-            &#125;
-            ans = min(ans,m/2);
-        &#125;
-        /*for(auto i = hash.begin();i!=hash.end();i++)&#123;
-            int m = i-&gt;second[0] + n - i-&gt;second.back();
-            int temp = 0;
-            for(int j=1;j&lt;i-&gt;second.size();j++)&#123;
-                temp = max(m,(i-&gt;second[j]-i-&gt;second[j-1]));
-            &#125;
-            ans = min(ans,temp/2);
-        &#125;*/
-        return ans;
-    &#125;
-&#125;;
-</code></pre>
-
+<p>1 &lt;&#x3D; n &#x3D;&#x3D; nums.length &lt;&#x3D; 50</p>
+<p>1 &lt;&#x3D; nums[i] &lt;&#x3D; 50</p>
+<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><h2 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h2><p>直接简单二重循环。每一轮都检查元素是否相同。因为给出的测例长度很短。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">distinctDifferenceArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        set&lt;<span class="hljs-type">int</span>&gt; prefix, afpix;<br>        vector&lt;<span class="hljs-type">int</span>&gt; ans;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i =<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            prefix.<span class="hljs-built_in">clear</span>();<br>            afpix.<span class="hljs-built_in">clear</span>();<br>            <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = <span class="hljs-number">0</span>;j&lt;n;j++)&#123;<br>                <span class="hljs-keyword">if</span>(j&lt;=i)&#123;<br>                    prefix.<span class="hljs-built_in">insert</span>(nums[j]);<br>                &#125;<br>                <span class="hljs-keyword">else</span>&#123;<br>                    afpix.<span class="hljs-built_in">insert</span>(nums[j]);<br>                &#125;<br>            &#125;<br>            ans.<span class="hljs-built_in">push_back</span>(prefix.<span class="hljs-built_in">size</span>()-afpix.<span class="hljs-built_in">size</span>());<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+<h2 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h2><p>其实也可以考虑用两个哈希数组计数，第一次循环从前开始记录不同数，第二次循环从后开始。</p>
+<p>最后再一个循环遍历访问哈希数组对就可以返回答案。</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">distinctDifferenceArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        set&lt;<span class="hljs-type">int</span>&gt; prefix, afpix;<br>        vector&lt;<span class="hljs-type">int</span>&gt; ans;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">prehash</span><span class="hljs-params">(n)</span>,<span class="hljs-title">afhash</span><span class="hljs-params">(n)</span></span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i =<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            prefix.<span class="hljs-built_in">insert</span>(nums[i]);<br>            prehash[i] = prefix.<span class="hljs-built_in">size</span>();<br>        &#125;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = n<span class="hljs-number">-1</span>;i&gt;=<span class="hljs-number">0</span>;i--)&#123;<br>            afpix.<span class="hljs-built_in">insert</span>(nums[i]);<br>            afhash[i] = afpix.<span class="hljs-built_in">size</span>();<br>        &#125;<br>        <span class="hljs-comment">//ans.push_back(prehash[0]-afhash[1]);</span><br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i =<span class="hljs-number">1</span>;i&lt;n;i++)&#123;<br>           ans.<span class="hljs-built_in">push_back</span>(prehash[i<span class="hljs-number">-1</span>]-afhash[i]);<br>        &#125;<br>        ans.<span class="hljs-built_in">push_back</span>(prehash[n<span class="hljs-number">-1</span>]);<br>        <span class="hljs-keyword">return</span> ans;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -350,8 +308,8 @@ public:
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>dailyProblem20240130</div>
-      <div>http://example.com/2024/01/30/dailyProblem20240130/</div>
+      <div>dailyProblem20240131</div>
+      <div>http://example.com/2024/01/31/dailyProblem20240131/</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +321,7 @@ public:
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年1月30日</div>
+          <div>2024年1月31日</div>
         </div>
       
       
@@ -395,18 +353,12 @@ public:
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/31/dailyProblem20240131/" title="dailyProblem20240131">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">dailyProblem20240131</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/25/dailyProblem20240124%20-%20%E5%89%AF%E6%9C%AC/" title="">
-                        <span class="hidden-mobile"></span>
+                      <a href="/2024/01/30/dailyProblem20240130/" title="dailyProblem20240130">
+                        <span class="hidden-mobile">dailyProblem20240130</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
