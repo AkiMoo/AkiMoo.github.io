@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="2865. 美丽塔 I中等 提示 给你一个长度为 n 下标从 0 开始的整数数组 maxHeights 。 你的任务是在坐标轴上建 n 座塔。第 i 座塔的下标为 i ，高度为 heights[i] 。 如果以下条件满足，我们称这些塔是 美丽 的：  1 &lt;&#x3D; heights[i] &lt;&#x3D; maxHeights[i] heights 是一个 山脉 数组。  如果存在下标 i 满足以下条件">
+    <meta name="description" content="记事——24年7月23日在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。 这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。 它大概不在于说我今天做了多少多少有价值的行为，">
 <meta property="og:type" content="article">
-<meta property="og:title" content="dailyProblem240127">
-<meta property="og:url" content="http://example.com/2024/07/17/dailyProblem240127/index.html">
+<meta property="og:title" content="DailyMemo240723">
+<meta property="og:url" content="http://example.com/2024/07/23/DailyMemo240723/index.html">
 <meta property="og:site_name" content="Aki">
-<meta property="og:description" content="2865. 美丽塔 I中等 提示 给你一个长度为 n 下标从 0 开始的整数数组 maxHeights 。 你的任务是在坐标轴上建 n 座塔。第 i 座塔的下标为 i ，高度为 heights[i] 。 如果以下条件满足，我们称这些塔是 美丽 的：  1 &lt;&#x3D; heights[i] &lt;&#x3D; maxHeights[i] heights 是一个 山脉 数组。  如果存在下标 i 满足以下条件">
+<meta property="og:description" content="记事——24年7月23日在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。 这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。 它大概不在于说我今天做了多少多少有价值的行为，">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-17T04:19:18.000Z">
-<meta property="article:modified_time" content="2024-07-17T04:19:51.536Z">
+<meta property="article:published_time" content="2024-07-23T15:53:44.000Z">
+<meta property="article:modified_time" content="2024-07-23T16:21:34.155Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Leetcode, C++">
+<meta property="article:tag" content="Memo">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>dailyProblem240127 - Aki</title>
+  <title>DailyMemo240723 - Aki</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="dailyProblem240127"></span>
+            <span id="subtitle" data-typed-text="DailyMemo240723"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-17 12:19" pubdate>
-          2024年7月17日 中午
+        <time datetime="2024-07-23 23:53" pubdate>
+          2024年7月23日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          983 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          14 分钟
+          9 分钟
         
       </span>
     
@@ -268,43 +268,20 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">dailyProblem240127</h1>
+            <h1 style="display: none">DailyMemo240723</h1>
             
             
               <div class="markdown-body">
                 
-                <h4 id="2865-美丽塔-I"><a href="#2865-美丽塔-I" class="headerlink" title="2865. 美丽塔 I"></a><strong><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/beautiful-towers-i/">2865. 美丽塔 I</a></strong></h4><p>中等</p>
-<p>提示</p>
-<p>给你一个长度为 <code>n</code> 下标从 <strong>0</strong> 开始的整数数组 <code>maxHeights</code> 。</p>
-<p>你的任务是在坐标轴上建 <code>n</code> 座塔。第 <code>i</code> 座塔的下标为 <code>i</code> ，高度为 <code>heights[i]</code> 。</p>
-<p>如果以下条件满足，我们称这些塔是 <strong>美丽</strong> 的：</p>
-<ol>
-<li><code>1 &lt;= heights[i] &lt;= maxHeights[i]</code></li>
-<li><code>heights</code> 是一个 <strong>山脉</strong> 数组。</li>
-</ol>
-<p>如果存在下标 <code>i</code> 满足以下条件，那么我们称数组 <code>heights</code> 是一个 <strong>山脉</strong> 数组：</p>
-<ul>
-<li>对于所有 <code>0 &lt; j &lt;= i</code> ，都有 <code>heights[j - 1] &lt;= heights[j]</code></li>
-<li>对于所有 <code>i &lt;= k &lt; n - 1</code> ，都有 <code>heights[k + 1] &lt;= heights[k]</code></li>
-</ul>
-<p>请你返回满足 <strong>美丽塔</strong> 要求的方案中，<strong>高度和的最大值</strong> 。</p>
-<p><strong>示例 1：</strong></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：maxHeights = <span class="hljs-selector-attr">[5,3,4,1,1]</span><br>输出：<span class="hljs-number">13</span><br>解释：和最大的美丽塔方案为 heights = <span class="hljs-selector-attr">[5,3,3,1,1]</span> ，这是一个美丽塔方案，因为：<br>- <span class="hljs-number">1</span> &lt;= heights<span class="hljs-selector-attr">[i]</span> &lt;= maxHeights<span class="hljs-selector-attr">[i]</span>  <br>- heights 是个山脉数组，峰值在 <span class="hljs-selector-tag">i</span> = <span class="hljs-number">0</span> 处。<br><span class="hljs-number">13</span> 是所有美丽塔方案中的最大高度和。<br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 2：</strong></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：maxHeights = <span class="hljs-selector-attr">[6,5,3,9,2,7]</span><br>输出：<span class="hljs-number">22</span><br>解释： 和最大的美丽塔方案为 heights = <span class="hljs-selector-attr">[3,3,3,9,2,2]</span> ，这是一个美丽塔方案，因为：<br>- <span class="hljs-number">1</span> &lt;= heights<span class="hljs-selector-attr">[i]</span> &lt;= maxHeights<span class="hljs-selector-attr">[i]</span><br>- heights 是个山脉数组，峰值在 <span class="hljs-selector-tag">i</span> = <span class="hljs-number">3</span> 处。<br><span class="hljs-number">22</span> 是所有美丽塔方案中的最大高度和。<br></code></pre></td></tr></table></figure>
-
-<p><strong>示例 3：</strong></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs stylus">输入：maxHeights = <span class="hljs-selector-attr">[3,2,5,5,2,3]</span><br>输出：<span class="hljs-number">18</span><br>解释：和最大的美丽塔方案为 heights = <span class="hljs-selector-attr">[2,2,5,5,2,2]</span> ，这是一个美丽塔方案，因为：<br>- <span class="hljs-number">1</span> &lt;= heights<span class="hljs-selector-attr">[i]</span> &lt;= maxHeights<span class="hljs-selector-attr">[i]</span><br>- heights 是个山脉数组，最大值在 <span class="hljs-selector-tag">i</span> = <span class="hljs-number">2</span> 处。<br>注意，在这个方案中，<span class="hljs-selector-tag">i</span> = <span class="hljs-number">3</span> 也是一个峰值。<br><span class="hljs-number">18</span> 是所有美丽塔方案中的最大高度和。<br></code></pre></td></tr></table></figure>
-
-<p><strong>提示：</strong></p>
-<ul>
-<li><code>1 &lt;= n == maxHeights &lt;= 103</code></li>
-<li><code>1 &lt;= maxHeights[i] &lt;= 109</code></li>
-</ul>
-<h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>第一眼认为选最高做塔顶就对了，但是答案是求和，肯定有奇怪的组合导致选最高为顶是错的，比如8888888888819这种。</p>
-<p>赶时间睡觉，给的数据量做两次循环也不爆，直接遍历</p>
-<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><code class="hljs cpp"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">long</span> <span class="hljs-type">long</span> <span class="hljs-title">maximumSumOfHeights</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; maxHeights)</span> </span>&#123;<br>        <span class="hljs-type">long</span> <span class="hljs-type">long</span> res = <span class="hljs-number">0</span>,maxx = <span class="hljs-number">0</span>;<br>        <span class="hljs-type">int</span> n = maxHeights.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i =<span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            <span class="hljs-type">long</span> <span class="hljs-type">long</span> temp = <span class="hljs-number">0</span>;<br>            <span class="hljs-type">int</span> prefix = maxHeights[i];<br>            <span class="hljs-keyword">if</span>(i&gt;=<span class="hljs-number">1</span>)&#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> j = i<span class="hljs-number">-1</span>;j&gt;=<span class="hljs-number">0</span>;j--)&#123;<br>                    temp+=<span class="hljs-built_in">min</span>(prefix,maxHeights[j]);<br>                    prefix = <span class="hljs-built_in">min</span>(prefix,maxHeights[j]);<br>                &#125;<br>            &#125;<br>            prefix = maxHeights[i];<br>            <span class="hljs-keyword">if</span>(i&lt;n)&#123;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = i+<span class="hljs-number">1</span>;k&lt;n;k++)&#123;<br>                    temp+=<span class="hljs-built_in">min</span>(prefix,maxHeights[k]);<br>                    prefix = <span class="hljs-built_in">min</span>(prefix,maxHeights[k]);<br>                &#125;<br>            &#125;<br>            temp += maxHeights[i];<br>            <span class="hljs-keyword">if</span>(maxx&lt;temp)&#123;<br>                res = temp;<br>                maxx = temp;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="记事——24年7月23日"><a href="#记事——24年7月23日" class="headerlink" title="记事——24年7月23日"></a>记事——24年7月23日</h1><p>在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。</p>
+<p>这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。</p>
+<p>它大概不在于说我今天做了多少多少有价值的行为，所以要把它记下来。而是记下来，在迷茫或者无聊之时，看看自己挣扎过，又或是快乐过的的痕迹。It is just simple。</p>
+<hr>
+<p>在华为工作的第三周，我还没开始写新的需求代码，可能是因为没什么值得给新人练手的任务，又或者是leader和mentor自己都忙不过来没办法兼顾指导。Anyway，保持自己的节奏学就好了。有一个我觉得困扰的地方是有一些文档和blog实在是看得想睡觉，可能是因为我看得太随意太杂，缺乏一定的目的性，可以考虑明天跟同事讨论一下修改一下我目前实习上的学习路线。毕竟如果8月结束我的简历上没办法描述我在华为两个月到底干了些啥，似乎也挺丢脸的。</p>
+<p>在摸鱼的时候，我之前设想的大学模拟类GalGame的玩意儿又有了一些“又新又老”的想法，不过囿于目前的技术和美术的欠缺，这些不应该是我当前应该考虑的事情。于是我想先把我想到的比较简单的玩法，先写出来，那也算是摸索和积累了。在上周没搞明白的走格子地图要怎么设计，今天看到了一个cmd走迷宫的游戏，才发现底层逻辑其实是一致的，我要考虑移动，只需要每次行动完刷新cmd屏幕，就能显示当前的位置和状态了。于是自己写了一个比较简单的走迷宫的cpp（已经传到仓库）。明天如果有时间的话，看一下能不能实现一个走格子积分的小游戏。还有编译好的文件汉字现实是乱码，这个也需要解决。</p>
+<p>今天还有一件值得说说的事情，在公司摸鱼写走迷宫的时候打算直接upload到仓库，结果公司那边打电话来提醒我不要贡献开源代码，差点就违反规定了，可能以后就算是在线编辑也要多加注意。</p>
+<p>晚上和朋友又探讨了一下“花束般的恋爱”，讨论并交换了观点。不得不说我的表达欲望真是非常强，回过头来看又是自己输出一堆，如果那么想说干脆把每天的Memo当作垃圾桶好了，可能过几年回来看又有不一样的感触了。</p>
+<p>今天就写到这里吧，还是有很多废话想说，明天提前预留半个小时记Memo吧，晚安。</p>
 
                 
               </div>
@@ -317,7 +294,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Leetcode-C/">#Leetcode, C++</a>
+        <a href="/tags/Memo/">#Memo</a>
       
     </div>
   
@@ -329,8 +306,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>dailyProblem240127</div>
-      <div>http://example.com/2024/07/17/dailyProblem240127/</div>
+      <div>DailyMemo240723</div>
+      <div>http://example.com/2024/07/23/DailyMemo240723/</div>
     </div>
     <div class="license-meta">
       
@@ -342,7 +319,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月17日</div>
+          <div>2024年7月23日</div>
         </div>
       
       
@@ -374,18 +351,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/23/DailyMemo240723/" title="DailyMemo240723">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">DailyMemo240723</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/17/testing/" title="testing">
-                        <span class="hidden-mobile">testing</span>
+                      <a href="/2024/07/17/dailyProblem240127/" title="dailyProblem240127">
+                        <span class="hidden-mobile">dailyProblem240127</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
