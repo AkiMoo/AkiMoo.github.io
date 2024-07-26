@@ -16,22 +16,22 @@
   <meta name="author" content="John Doe">
   <meta name="keywords" content="">
   
-    <meta name="description" content="记事——24年7月23日在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。 这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。 它大概不在于说我今天做了多少多少有价值的行为，">
+    <meta name="description" content="2740. 找出分区值 给你一个 正 整数数组 nums 。 将 nums 分成两个数组：nums1 和 nums2 ，并满足下述条件：  数组 nums 中的每个元素都属于数组 nums1 或数组 nums2 。 两个数组都 非空 。 分区值 最小 。  分区值的计算方法是 |max(nums1) - min(nums2)| 。 其中，max(nums1) 表示数组 nums1 中的最大元素，m">
 <meta property="og:type" content="article">
-<meta property="og:title" content="DailyMemo240723">
-<meta property="og:url" content="http://example.com/2024/07/23/DailyMemo240723/index.html">
+<meta property="og:title" content="dailyProblem240726">
+<meta property="og:url" content="http://example.com/2024/07/26/dailyProblem240726/index.html">
 <meta property="og:site_name" content="Aki">
-<meta property="og:description" content="记事——24年7月23日在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。 这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。 它大概不在于说我今天做了多少多少有价值的行为，">
+<meta property="og:description" content="2740. 找出分区值 给你一个 正 整数数组 nums 。 将 nums 分成两个数组：nums1 和 nums2 ，并满足下述条件：  数组 nums 中的每个元素都属于数组 nums1 或数组 nums2 。 两个数组都 非空 。 分区值 最小 。  分区值的计算方法是 |max(nums1) - min(nums2)| 。 其中，max(nums1) 表示数组 nums1 中的最大元素，m">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-07-23T15:53:44.000Z">
-<meta property="article:modified_time" content="2024-07-23T16:21:34.155Z">
+<meta property="article:published_time" content="2024-07-26T11:05:38.000Z">
+<meta property="article:modified_time" content="2024-07-26T11:18:19.456Z">
 <meta property="article:author" content="John Doe">
-<meta property="article:tag" content="Memo">
+<meta property="article:tag" content="Leetcode, C++">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>DailyMemo240723 - Aki</title>
+  <title>dailyProblem240726 - Aki</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="DailyMemo240723"></span>
+            <span id="subtitle" data-typed-text="dailyProblem240726"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-07-23 23:53" pubdate>
-          2024年7月23日 晚上
+        <time datetime="2024-07-26 19:05" pubdate>
+          2024年7月26日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          983 字
+          865 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          9 分钟
+          8 分钟
         
       </span>
     
@@ -268,20 +268,39 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">DailyMemo240723</h1>
+            <h1 style="display: none">dailyProblem240726</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id=""><a href="#" class="headerlink" title=""></a></h1><h1 id="记事——24年7月23日"><a href="#记事——24年7月23日" class="headerlink" title="记事——24年7月23日"></a>记事——24年7月23日</h1><p>在上周回家弄好博客之后我就说要写一下日记，但各种犯懒又没能动手写，好在今天产出第一篇了，希望能坚持。</p>
-<p>这个想法在考研的时候也有，不过没坚持下来，有时候会觉得如果我今天就是做了不少事情，那我不需要记录，他也化为了我的内在一部分。但是最近刷到了polebug的视频，又想起之前嘉炜也是长期坚持记录的习惯，让我重新审视Memo的价值。</p>
-<p>它大概不在于说我今天做了多少多少有价值的行为，所以要把它记下来。而是记下来，在迷茫或者无聊之时，看看自己挣扎过，又或是快乐过的的痕迹。It is just simple。</p>
-<hr>
-<p>在华为工作的第三周，我还没开始写新的需求代码，可能是因为没什么值得给新人练手的任务，又或者是leader和mentor自己都忙不过来没办法兼顾指导。Anyway，保持自己的节奏学就好了。有一个我觉得困扰的地方是有一些文档和blog实在是看得想睡觉，可能是因为我看得太随意太杂，缺乏一定的目的性，可以考虑明天跟同事讨论一下修改一下我目前实习上的学习路线。毕竟如果8月结束我的简历上没办法描述我在华为两个月到底干了些啥，似乎也挺丢脸的。</p>
-<p>在摸鱼的时候，我之前设想的大学模拟类GalGame的玩意儿又有了一些“又新又老”的想法，不过囿于目前的技术和美术的欠缺，这些不应该是我当前应该考虑的事情。于是我想先把我想到的比较简单的玩法，先写出来，那也算是摸索和积累了。在上周没搞明白的走格子地图要怎么设计，今天看到了一个cmd走迷宫的游戏，才发现底层逻辑其实是一致的，我要考虑移动，只需要每次行动完刷新cmd屏幕，就能显示当前的位置和状态了。于是自己写了一个比较简单的走迷宫的cpp（已经传到仓库）。明天如果有时间的话，看一下能不能实现一个走格子积分的小游戏。还有编译好的文件汉字现实是乱码，这个也需要解决。</p>
-<p>今天还有一件值得说说的事情，在公司摸鱼写走迷宫的时候打算直接upload到仓库，结果公司那边打电话来提醒我不要贡献开源代码，差点就违反规定了，可能以后就算是在线编辑也要多加注意。</p>
-<p>晚上和朋友又探讨了一下“花束般的恋爱”，讨论并交换了观点。不得不说我的表达欲望真是非常强，回过头来看又是自己输出一堆，如果那么想说干脆把每天的Memo当作垃圾桶好了，可能过几年回来看又有不一样的感触了。</p>
-<p>今天就写到这里吧，还是有很多废话想说，明天提前预留半个小时记Memo吧，晚安。</p>
+                <p><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/find-the-value-of-the-partition/">2740. 找出分区值</a></p>
+<p>给你一个 <strong>正</strong> 整数数组 <code>nums</code> 。</p>
+<p>将 <code>nums</code> 分成两个数组：<code>nums1</code> 和 <code>nums2</code> ，并满足下述条件：</p>
+<ul>
+<li>数组 <code>nums</code> 中的每个元素都属于数组 <code>nums1</code> 或数组 <code>nums2</code> 。</li>
+<li>两个数组都 <strong>非空</strong> 。</li>
+<li>分区值 <strong>最小</strong> 。</li>
+</ul>
+<p>分区值的计算方法是 <code>|max(nums1) - min(nums2)|</code> 。</p>
+<p>其中，<code>max(nums1)</code> 表示数组 <code>nums1</code> 中的最大元素，<code>min(nums2)</code> 表示数组 <code>nums2</code> 中的最小元素。</p>
+<p>返回表示分区值的整数。</p>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs tap">输入：nums = [1,3,2,4]<br>输出：1<br>解释：可以将数组 nums 分成 nums1 = [1,2] 和 nums2 = [3,4] 。<br>- 数组 nums1 的最大值等于<span class="hljs-number"> 2 </span>。<br>- 数组 nums2 的最小值等于<span class="hljs-number"> 3 </span>。<br>分区值等于 |2 - 3| =<span class="hljs-number"> 1 </span>。<br>可以证明<span class="hljs-number"> 1 </span>是所有分区方案的最小值。<br></code></pre></td></tr></table></figure>
+
+<p><strong>示例 2：</strong></p>
+<figure class="highlight tap"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs tap">输入：nums = [100,1,10]<br>输出：9<br>解释：可以将数组 nums 分成 nums1 = [10] 和 nums2 = [100,1] 。 <br>- 数组 nums1 的最大值等于<span class="hljs-number"> 10 </span>。 <br>- 数组 nums2 的最小值等于<span class="hljs-number"> 1 </span>。 <br>分区值等于 |10 - 1| =<span class="hljs-number"> 9 </span>。 <br>可以证明<span class="hljs-number"> 9 </span>是所有分区方案的最小值。<br></code></pre></td></tr></table></figure>
+
+<p><strong>提示：</strong></p>
+<ul>
+<li><code>2 &lt;= nums.length &lt;= 105</code></li>
+<li><code>1 &lt;= nums[i] &lt;= 109</code></li>
+</ul>
+<h1 id="SOLUTION"><a href="#SOLUTION" class="headerlink" title="SOLUTION"></a>SOLUTION</h1><p>这道题有点幽默，要求将数组分为两组，返回其中一组的最大值与另一组最小值的差值。</p>
+<p>如果只返回值的话根本不需要考虑怎么分，我只需要找出有序数组的相邻元素最少差值，然后在这个位置将元素分成两拨就好了。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">findValueOfPartition</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-type">int</span> res= INT_MAX;<br>        <span class="hljs-built_in">sort</span>(nums.<span class="hljs-built_in">begin</span>(),nums.<span class="hljs-built_in">end</span>());<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">1</span>;i&lt;nums.<span class="hljs-built_in">size</span>();i++)&#123;<br>            res=<span class="hljs-built_in">min</span>(res,<span class="hljs-built_in">abs</span>(nums[i]-nums[i<span class="hljs-number">-1</span>]));<br>    	&#125;<br>        <span class="hljs-keyword">return</span> res;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+
+
+
 
                 
               </div>
@@ -294,7 +313,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/Memo/">#Memo</a>
+        <a href="/tags/Leetcode-C/">#Leetcode, C++</a>
       
     </div>
   
@@ -306,8 +325,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>DailyMemo240723</div>
-      <div>http://example.com/2024/07/23/DailyMemo240723/</div>
+      <div>dailyProblem240726</div>
+      <div>http://example.com/2024/07/26/dailyProblem240726/</div>
     </div>
     <div class="license-meta">
       
@@ -319,7 +338,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2024年7月23日</div>
+          <div>2024年7月26日</div>
         </div>
       
       
@@ -351,18 +370,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/07/26/dailyProblem240724/" title="dailyProblem240724">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">dailyProblem240724</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/17/dailyProblem240127/" title="dailyProblem240127">
-                        <span class="hidden-mobile">dailyProblem240127</span>
+                      <a href="/2024/07/26/dailyProblem240725/" title="dailyProblem240725">
+                        <span class="hidden-mobile">dailyProblem240725</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
