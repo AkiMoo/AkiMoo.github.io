@@ -16,22 +16,22 @@
   <meta name="author" content="AkiMo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="1926. 迷宫中离入口最近的出口给你一个 m x n 的迷宫矩阵 maze （下标从 0 开始），矩阵中有空格子（用 ‘.’ 表示）和墙（用 ‘+’ 表示）。同时给你迷宫的入口 entrance ，用 entrance &#x3D; [entrancerow, entrancecol] 表示你一开始所在格子的行和列。 每一步操作，你可以往 上，下，左 或者 右 移动一个格子。你不能进入墙所在的格子，你也不">
+    <meta name="description" content="841. 钥匙和房间有 n 个房间，房间按从 0 到 n - 1 编号。最初，除 0 号房间外的其余所有房间都被锁住。你的目标是进入所有的房间。然而，你不能在没有获得钥匙的时候进入锁住的房间。 当你进入一个房间，你可能会在里面找到一套 不同的钥匙，每把钥匙上都有对应的房间号，即表示钥匙可以打开的房间。你可以拿上所有钥匙去解锁其他房间。 给你一个数组 rooms 其中 rooms[i] 是你进入 i">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Practice_250227_1">
-<meta property="og:url" content="http://example.com/2025/02/27/Practice-250227-1/index.html">
+<meta property="og:title" content="Practice_250227_2">
+<meta property="og:url" content="http://example.com/2025/02/27/Practice-250227-2/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="1926. 迷宫中离入口最近的出口给你一个 m x n 的迷宫矩阵 maze （下标从 0 开始），矩阵中有空格子（用 ‘.’ 表示）和墙（用 ‘+’ 表示）。同时给你迷宫的入口 entrance ，用 entrance &#x3D; [entrancerow, entrancecol] 表示你一开始所在格子的行和列。 每一步操作，你可以往 上，下，左 或者 右 移动一个格子。你不能进入墙所在的格子，你也不">
+<meta property="og:description" content="841. 钥匙和房间有 n 个房间，房间按从 0 到 n - 1 编号。最初，除 0 号房间外的其余所有房间都被锁住。你的目标是进入所有的房间。然而，你不能在没有获得钥匙的时候进入锁住的房间。 当你进入一个房间，你可能会在里面找到一套 不同的钥匙，每把钥匙上都有对应的房间号，即表示钥匙可以打开的房间。你可以拿上所有钥匙去解锁其他房间。 给你一个数组 rooms 其中 rooms[i] 是你进入 i">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-27T12:38:06.000Z">
-<meta property="article:modified_time" content="2025-02-27T12:50:51.397Z">
+<meta property="article:published_time" content="2025-02-27T13:14:47.000Z">
+<meta property="article:modified_time" content="2025-02-27T13:54:59.662Z">
 <meta property="article:author" content="AkiMo">
 <meta property="article:tag" content="C++, LeetCode">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>Practice_250227_1 - Hexo</title>
+  <title>Practice_250227_2 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Practice_250227_1"></span>
+            <span id="subtitle" data-typed-text="Practice_250227_2"></span>
           
         </div>
 
@@ -207,7 +207,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-27 20:38" pubdate>
+        <time datetime="2025-02-27 21:14" pubdate>
           2025年2月27日 晚上
         </time>
       </span>
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.3k 字
+          1.3k 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          20 分钟
+          11 分钟
         
       </span>
     
@@ -268,28 +268,25 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Practice_250227_1</h1>
+            <h1 style="display: none">Practice_250227_2</h1>
             
             
               <div class="markdown-body">
                 
-                <h1 id="1926-迷宫中离入口最近的出口"><a href="#1926-迷宫中离入口最近的出口" class="headerlink" title="1926. 迷宫中离入口最近的出口"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/nearest-exit-from-entrance-in-maze/description/?envType=study-plan-v2&envId=leetcode-75">1926. 迷宫中离入口最近的出口</a></h1><p>给你一个 <code>m x n</code> 的迷宫矩阵 <code>maze</code> （下标从 0 开始），矩阵中有空格子（用 ‘.’ 表示）和墙（用 ‘+’ 表示）。同时给你迷宫的入口 <code>entrance</code> ，用 <code>entrance = [entrancerow, entrancecol]</code> 表示你一开始所在格子的行和列。</p>
-<p>每一步操作，你可以往 上，下，左 或者 右 移动一个格子。你不能进入墙所在的格子，你也不能离开迷宫。你的目标是找到离 <code>entrance</code> <strong>最近</strong> 的出口。出口 的含义是 <code>maze</code> 边界 上的 空格子。<code>entrance</code> 格子 <strong>不算</strong> 出口。</p>
-<p>请你返回从 <code>entrance</code> 到最近出口的最短路径的 <strong>步数</strong> ，如果不存在这样的路径，请你返回 <code>-1</code> 。</p>
+                <h1 id="841-钥匙和房间"><a href="#841-钥匙和房间" class="headerlink" title="841. 钥匙和房间"></a><a target="_blank" rel="noopener" href="https://leetcode.cn/problems/keys-and-rooms/description/?envType=study-plan-v2&envId=leetcode-75">841. 钥匙和房间</a></h1><p>有 <code>n</code> 个房间，房间按从 <code>0</code> 到 <code>n - 1</code> 编号。最初，除 <code>0</code> 号房间外的其余所有房间都被锁住。你的目标是进入所有的房间。然而，你不能在没有获得钥匙的时候进入锁住的房间。</p>
+<p>当你进入一个房间，你可能会在里面找到一套 不同的钥匙，每把钥匙上都有对应的房间号，即表示钥匙可以打开的房间。你可以拿上所有钥匙去解锁其他房间。</p>
+<p>给你一个数组 <code>rooms</code> 其中 <code>rooms[i]</code> 是你进入 <code>i</code> 号房间可以获得的钥匙集合。如果能进入 <strong>所有</strong> 房间返回 <code>true</code>，否则返回 <code>false</code>。</p>
 <p><strong>示例 1：</strong></p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs prolog">输入：maze = [[<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>],[<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>],[<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>]], entrance = [<span class="hljs-number">1</span>,<span class="hljs-number">2</span>]<br>输出：<span class="hljs-number">1</span><br>解释：总共有 <span class="hljs-number">3</span> 个出口，分别位于 (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>)，(<span class="hljs-number">0</span>,<span class="hljs-number">2</span>) 和 (<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) 。<br>一开始，你在入口格子 (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>) 处。<br>- 你可以往左移动 <span class="hljs-number">2</span> 步到达 (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>) 。<br>- 你可以往上移动 <span class="hljs-number">1</span> 步到达 (<span class="hljs-number">0</span>,<span class="hljs-number">2</span>) 。<br>从入口处没法到达 (<span class="hljs-number">2</span>,<span class="hljs-number">3</span>) 。<br>所以，最近的出口是 (<span class="hljs-number">0</span>,<span class="hljs-number">2</span>) ，距离为 <span class="hljs-number">1</span> 步。<br></code></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：rooms = <span class="hljs-string">[[1],[2],[3],[]]</span><br>输出：<span class="hljs-literal">true</span><br>解释：<br>我们从 <span class="hljs-number">0</span> 号房间开始，拿到钥匙 <span class="hljs-number">1</span>。<br>之后我们去 <span class="hljs-number">1</span> 号房间，拿到钥匙 <span class="hljs-number">2</span>。<br>然后我们去 <span class="hljs-number">2</span> 号房间，拿到钥匙 <span class="hljs-number">3</span>。<br>最后我们去了 <span class="hljs-number">3</span> 号房间。<br>由于我们能够进入每个房间，我们返回 <span class="hljs-literal">true</span>。<br></code></pre></td></tr></table></figure>
 <p><strong>示例 2：</strong></p>
-<figure class="highlight prolog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs prolog">输入：maze = [[<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>],[<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>,<span class="hljs-string">&quot;.&quot;</span>],[<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>,<span class="hljs-string">&quot;+&quot;</span>]], entrance = [<span class="hljs-number">1</span>,<span class="hljs-number">0</span>]<br>输出：<span class="hljs-number">2</span><br>解释：迷宫中只有 <span class="hljs-number">1</span> 个出口，在 (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>) 处。<br>(<span class="hljs-number">1</span>,<span class="hljs-number">0</span>) 不算出口，因为它是入口格子。<br>初始时，你在入口与格子 (<span class="hljs-number">1</span>,<span class="hljs-number">0</span>) 处。<br>- 你可以往右移动 <span class="hljs-number">2</span> 步到达 (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>) 处。<br>所以，最近的出口为 (<span class="hljs-number">1</span>,<span class="hljs-number">2</span>) ，距离为 <span class="hljs-number">2</span> 步。<br></code></pre></td></tr></table></figure>
-<p><strong>示例 3：</strong></p>
-<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：maze = <span class="hljs-string">[[&quot;.&quot;,&quot;+&quot;]]</span>, entrance = [<span class="hljs-number">0</span>,<span class="hljs-number">0</span>]<br>输出：<span class="hljs-number">-1</span><br>解释：这个迷宫中没有出口。<br></code></pre></td></tr></table></figure>
+<figure class="highlight lua"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs lua">输入：rooms = <span class="hljs-string">[[1,3],[3,0,1],[2],[0]]</span><br>输出：<span class="hljs-literal">false</span><br>解释：我们不能进入 <span class="hljs-number">2</span> 号房间。<br></code></pre></td></tr></table></figure>
 
 <p><strong>提示：</strong></p>
-<figure class="highlight stylus"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><code class="hljs stylus">maze<span class="hljs-selector-class">.length</span> == m<br>maze<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-class">.length</span> == n<br><span class="hljs-number">1</span> &lt;= m, n &lt;= <span class="hljs-number">100</span><br>maze<span class="hljs-selector-attr">[i]</span><span class="hljs-selector-attr">[j]</span> 要么是 <span class="hljs-string">&#x27;.&#x27;</span> ，要么是 <span class="hljs-string">&#x27;+&#x27;</span> 。<br>entrance<span class="hljs-selector-class">.length</span> == <span class="hljs-number">2</span><br><span class="hljs-number">0</span> &lt;= entrancerow &lt; m<br><span class="hljs-number">0</span> &lt;= entrancecol &lt; n<br>entrance 一定是空格子。<br></code></pre></td></tr></table></figure>
+<figure class="highlight abnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs abnf"><span class="hljs-attribute">n</span> <span class="hljs-operator">=</span><span class="hljs-operator">=</span> rooms.length<br><span class="hljs-number">2</span> &lt;<span class="hljs-operator">=</span> n &lt;<span class="hljs-operator">=</span> <span class="hljs-number">1000</span><br><span class="hljs-number">0</span> &lt;<span class="hljs-operator">=</span> rooms[i].length &lt;<span class="hljs-operator">=</span> <span class="hljs-number">1000</span><br><span class="hljs-number">1</span> &lt;<span class="hljs-operator">=</span> sum(rooms[i].length) &lt;<span class="hljs-operator">=</span> <span class="hljs-number">3000</span><br><span class="hljs-number">0</span> &lt;<span class="hljs-operator">=</span> rooms[i][j] &lt; n<br>所有 rooms[i] 的值 互不相同<br></code></pre></td></tr></table></figure>
 
-<h1 id="SOLUTION"><a href="#SOLUTION" class="headerlink" title="SOLUTION"></a>SOLUTION</h1><p>拿到题想都没想就DFS了，但是边界定位不够仔细，调了比较久。但是DFS在这道题超时了，因为DFS会一条路走到走不通才会往回走。<br>这道题要找最近的出口，应该选用BFS。<br>BFS练习得确实不够多，一开始pop的位置没放好，调了比较久。<br>还有一点就是多弄个额外位置去记录现在是第几层，这个层数要跟坐标绑定，并不能放在循环外加，否则会多加。</p>
-<p>PS：这种不能回头的广搜直接将走过的格子变成墙就能省下visited数组的空间。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">int</span> <span class="hljs-title">minimumOperations</span><span class="hljs-params">(string &amp;num)</span> </span>&#123;<br>        <span class="hljs-type">int</span> n = num.<span class="hljs-built_in">length</span>();<br>        <span class="hljs-built_in">reverse</span>(num.<span class="hljs-built_in">begin</span>(),num.<span class="hljs-built_in">end</span>());<br>        stack&lt;<span class="hljs-type">char</span>&gt; s1,s2;<br>        <span class="hljs-type">int</span> mark1 = <span class="hljs-number">1000</span>,mark2=<span class="hljs-number">1000</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            <span class="hljs-keyword">if</span>(s1.<span class="hljs-built_in">empty</span>())&#123;<br>                <span class="hljs-keyword">if</span>(num[i]==<span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                    s1.<span class="hljs-built_in">push</span>(num[i]);<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s1.<span class="hljs-built_in">top</span>()==<span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                <span class="hljs-keyword">if</span>(num[i]==<span class="hljs-string">&#x27;5&#x27;</span>||num[i]==<span class="hljs-string">&#x27;0&#x27;</span>)&#123;<br>                    s1.<span class="hljs-built_in">push</span>(num[i]);<br>                    mark1 = i;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br><br>            <span class="hljs-keyword">if</span>(s2.<span class="hljs-built_in">empty</span>())&#123;<br>                <span class="hljs-keyword">if</span>(num[i]==<span class="hljs-string">&#x27;5&#x27;</span>)&#123;<br>                    s2.<span class="hljs-built_in">push</span>(num[i]);<br>                &#125;<br>            &#125;<br>            <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s2.<span class="hljs-built_in">top</span>()==<span class="hljs-string">&#x27;5&#x27;</span>)&#123;<br>                <span class="hljs-keyword">if</span>(num[i]==<span class="hljs-string">&#x27;2&#x27;</span>||num[i]==<span class="hljs-string">&#x27;7&#x27;</span>)&#123;<br>                    s2.<span class="hljs-built_in">push</span>(num[i]);<br>                    mark2 = i;<br>                    <span class="hljs-keyword">break</span>;<br>                &#125;<br>            &#125;<br>        &#125;<br>        <span class="hljs-keyword">if</span>(s1.<span class="hljs-built_in">size</span>()&gt;<span class="hljs-number">1</span>&amp;&amp;s2.<span class="hljs-built_in">size</span>()&gt;<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> <span class="hljs-built_in">min</span>(mark1,mark2) - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s1.<span class="hljs-built_in">size</span>()&gt;<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> mark1 - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s2.<span class="hljs-built_in">size</span>()&gt;<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> mark2 - <span class="hljs-number">1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span>(s1.<span class="hljs-built_in">size</span>()==<span class="hljs-number">1</span>)&#123;<br>            <span class="hljs-keyword">return</span> n<span class="hljs-number">-1</span>;<br>        &#125;<br>        <span class="hljs-keyword">else</span>&#123;<br>            <span class="hljs-keyword">return</span> n;<br>        &#125;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-
+<h1 id="SOLUTION"><a href="#SOLUTION" class="headerlink" title="SOLUTION"></a>SOLUTION</h1><p>继刚刚广搜的一道题。<br>每间钥匙对应一间房，每一轮拿完钥匙就把房间加入队列，然后逐个检查钥匙对应的房间。钥匙全部用完之后visited数组还存在值为0则返回false。</p>
+<p>PS：如果是对visited数组进行计数的话，可以直接置一个计数值在循环内，最后比较那个值是否等于n，就不需要在数组里找0。</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">bool</span> <span class="hljs-title">canVisitAllRooms</span><span class="hljs-params">(vector&lt;vector&lt;<span class="hljs-type">int</span>&gt;&gt;&amp; rooms)</span> </span>&#123;<br>        <span class="hljs-type">int</span> n = rooms.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">hash</span><span class="hljs-params">(n)</span></span>;<br>        queue&lt;<span class="hljs-type">int</span>&gt; key_q;<br>        hash[<span class="hljs-number">0</span>] = <span class="hljs-number">1</span>;<br>        <span class="hljs-type">int</span> ans = <span class="hljs-number">1</span>;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=<span class="hljs-number">0</span>;i&lt;rooms[<span class="hljs-number">0</span>].<span class="hljs-built_in">size</span>();i++)&#123;<br>            key_q.<span class="hljs-built_in">push</span>(rooms[<span class="hljs-number">0</span>][i]);<br>        &#125;<br>        <span class="hljs-keyword">while</span>(!key_q.<span class="hljs-built_in">empty</span>())&#123;<br>            <span class="hljs-keyword">if</span>(!hash[key_q.<span class="hljs-built_in">front</span>()])&#123;<br>                <span class="hljs-type">int</span> i = key_q.<span class="hljs-built_in">front</span>();<br>                hash[i] = <span class="hljs-number">1</span>;<br>                ans++;<br>                <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> k = <span class="hljs-number">0</span>;k&lt;rooms[i].<span class="hljs-built_in">size</span>();k++)&#123;<br>                    <span class="hljs-keyword">if</span>(hash[rooms[i][k]] != <span class="hljs-number">1</span>)&#123;<br>                        key_q.<span class="hljs-built_in">push</span>(rooms[i][k]);<br>                    &#125;<br>                &#125;<br>            &#125;<br>            key_q.<span class="hljs-built_in">pop</span>();<br>        &#125;<br>        <span class="hljs-keyword">return</span> ans==n;<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
 
                 
               </div>
@@ -314,8 +311,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Practice_250227_1</div>
-      <div>http://example.com/2025/02/27/Practice-250227-1/</div>
+      <div>Practice_250227_2</div>
+      <div>http://example.com/2025/02/27/Practice-250227-2/</div>
     </div>
     <div class="license-meta">
       
@@ -359,9 +356,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/02/27/Practice-250227-2/" title="Practice_250227_2">
+                      <a href="/2025/02/27/Practice-250227-3/" title="Practice_250227_3">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Practice_250227_2</span>
+                        <span class="hidden-mobile">Practice_250227_3</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -369,8 +366,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/07/29/DailyMemo240729/" title="DailyMemo240729">
-                        <span class="hidden-mobile">DailyMemo240729</span>
+                      <a href="/2025/02/27/Practice-250227-1/" title="Practice_250227_1">
+                        <span class="hidden-mobile">Practice_250227_1</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
