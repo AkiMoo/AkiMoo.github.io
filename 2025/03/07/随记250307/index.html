@@ -16,22 +16,22 @@
   <meta name="author" content="AkiMo">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Version1自己写的Version1，建堆是按照定义来的，但是每次都在建堆，复杂度还是n平方。 12345678910111213141516171819202122232425class Solution &amp;#123;public:    void buildHeap(vector&lt;int&gt;&amp; nums,int low,int n)&amp;#123;        for(in">
+    <meta name="description" content="写在笔试前夜明天就是mihoyo春招笔试了。对于在去年11月才决定进入游戏行业的我，按照现在的情况，很可能是春招第一次且最后一次的机会了。说来也惭愧，一直以来都没有很深入地思考，毕业之后的生活，等真正到来了，被时间推着不得不向前的时候，却又不能接受曾经随波逐流的自己。常常觉得进入社会，要考虑收入，考虑稳定，考虑家庭，但这些东西说重要也不重要。在进入大学之后，我发现我在对自己诚实这件事越来越懦弱：比">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HeapSortTemplete">
-<meta property="og:url" content="http://example.com/2025/02/28/HeapSortTemplete/index.html">
+<meta property="og:title" content="随记250307">
+<meta property="og:url" content="http://example.com/2025/03/07/%E9%9A%8F%E8%AE%B0250307/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="Version1自己写的Version1，建堆是按照定义来的，但是每次都在建堆，复杂度还是n平方。 12345678910111213141516171819202122232425class Solution &amp;#123;public:    void buildHeap(vector&lt;int&gt;&amp; nums,int low,int n)&amp;#123;        for(in">
+<meta property="og:description" content="写在笔试前夜明天就是mihoyo春招笔试了。对于在去年11月才决定进入游戏行业的我，按照现在的情况，很可能是春招第一次且最后一次的机会了。说来也惭愧，一直以来都没有很深入地思考，毕业之后的生活，等真正到来了，被时间推着不得不向前的时候，却又不能接受曾经随波逐流的自己。常常觉得进入社会，要考虑收入，考虑稳定，考虑家庭，但这些东西说重要也不重要。在进入大学之后，我发现我在对自己诚实这件事越来越懦弱：比">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2025-02-28T10:49:04.000Z">
-<meta property="article:modified_time" content="2025-02-28T16:57:06.163Z">
+<meta property="article:published_time" content="2025-03-07T15:49:33.000Z">
+<meta property="article:modified_time" content="2025-03-07T16:33:23.890Z">
 <meta property="article:author" content="AkiMo">
-<meta property="article:tag" content="C++, Algorithm">
+<meta property="article:tag" content="Memo">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>HeapSortTemplete - Hexo</title>
+  <title>随记250307 - Hexo</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -196,7 +196,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="HeapSortTemplete"></span>
+            <span id="subtitle" data-typed-text="随记250307"></span>
           
         </div>
 
@@ -207,8 +207,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2025-02-28 18:49" pubdate>
-          2025年2月28日 晚上
+        <time datetime="2025-03-07 23:49" pubdate>
+          2025年3月7日 晚上
         </time>
       </span>
     
@@ -219,7 +219,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.6k 字
+          697 字
         
       </span>
     
@@ -230,7 +230,7 @@
         
         
         
-          14 分钟
+          6 分钟
         
       </span>
     
@@ -268,15 +268,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">HeapSortTemplete</h1>
+            <h1 style="display: none">随记250307</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="Version1"><a href="#Version1" class="headerlink" title="Version1"></a>Version1</h2><p>自己写的Version1，建堆是按照定义来的，但是每次都在建堆，复杂度还是n平方。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">buildHeap</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums,<span class="hljs-type">int</span> low,<span class="hljs-type">int</span> n)</span></span>&#123;<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=(n<span class="hljs-number">-1</span>)/<span class="hljs-number">2</span>;i&gt;=low;i--)&#123;<br>            <span class="hljs-type">int</span> lson = i*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>,rson = i*<span class="hljs-number">2</span>+<span class="hljs-number">2</span>;<br>            <span class="hljs-keyword">if</span>(lson&lt;n&amp;&amp;nums[i]&lt;nums[lson])&#123;<br>                <span class="hljs-built_in">swap</span>(nums[i],nums[lson]);<br>            &#125;<br>            <span class="hljs-keyword">if</span>(rson&lt;n&amp;&amp;nums[i]&lt;nums[rson])&#123;<br>                <span class="hljs-built_in">swap</span>(nums[i],nums[rson]);<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">HeapSort</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span></span>&#123;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            <span class="hljs-built_in">buildHeap</span>(nums,<span class="hljs-number">0</span>,n-i);<br>            <span class="hljs-built_in">swap</span>(nums[<span class="hljs-number">0</span>],nums[n-i<span class="hljs-number">-1</span>]);<br>        &#125;<br>        <span class="hljs-keyword">return</span> nums;<br>    &#125;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sortArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">HeapSort</span>(nums);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
-<h2 id="Version2"><a href="#Version2" class="headerlink" title="Version2"></a>Version2</h2><p>每次只做堆调整，建堆只做一次。</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><code class="hljs C++"><span class="hljs-keyword">class</span> <span class="hljs-title class_">Solution</span> &#123;<br><span class="hljs-keyword">public</span>:<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">maxHeapify</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums,<span class="hljs-type">int</span> low,<span class="hljs-type">int</span> n)</span></span>&#123;<br>        <span class="hljs-keyword">while</span>(low*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>&lt;n)&#123;<br>            <span class="hljs-type">int</span> lson = low*<span class="hljs-number">2</span>+<span class="hljs-number">1</span>,rson = low*<span class="hljs-number">2</span>+<span class="hljs-number">2</span>;<br>            <span class="hljs-type">int</span> maxIndex = low;<br>            <span class="hljs-keyword">if</span>(lson&lt;n&amp;&amp;nums[lson]&gt;nums[maxIndex])&#123;<br>                maxIndex = lson;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(rson&lt;n&amp;&amp;nums[rson]&gt;nums[maxIndex])&#123;<br>                maxIndex = rson;<br>            &#125;<br>            <span class="hljs-keyword">if</span>(maxIndex!=low)&#123;<br>                <span class="hljs-built_in">swap</span>(nums[low],nums[maxIndex]);<br>                low = maxIndex;<br>            &#125;<br>            <span class="hljs-keyword">else</span>&#123;<br>                <span class="hljs-keyword">break</span>;<br>            &#125;<br>        &#125;<br>    &#125;<br>    <span class="hljs-function"><span class="hljs-type">void</span> <span class="hljs-title">buildMaxHeap</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt; &amp;nums)</span></span>&#123;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i=n/<span class="hljs-number">2</span>;i&gt;=<span class="hljs-number">0</span>;i--)&#123;<br>            <span class="hljs-built_in">maxHeapify</span>(nums,i,n);<br>        &#125;<br>    &#125;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">HeapSort</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span></span>&#123;<br>        <span class="hljs-type">int</span> n = nums.<span class="hljs-built_in">size</span>();<br>        <span class="hljs-built_in">buildMaxHeap</span>(nums);<br>        <span class="hljs-keyword">for</span>(<span class="hljs-type">int</span> i = <span class="hljs-number">0</span>;i&lt;n;i++)&#123;<br>            <span class="hljs-built_in">swap</span>(nums[<span class="hljs-number">0</span>],nums[n-i<span class="hljs-number">-1</span>]);<br>            <span class="hljs-built_in">maxHeapify</span>(nums,<span class="hljs-number">0</span>,n-i<span class="hljs-number">-1</span>);<br>        &#125;<br>        <span class="hljs-keyword">return</span> nums;<br>    &#125;<br>    <span class="hljs-function">vector&lt;<span class="hljs-type">int</span>&gt; <span class="hljs-title">sortArray</span><span class="hljs-params">(vector&lt;<span class="hljs-type">int</span>&gt;&amp; nums)</span> </span>&#123;<br>        <span class="hljs-keyword">return</span> <span class="hljs-built_in">HeapSort</span>(nums);<br>    &#125;<br>&#125;;<br></code></pre></td></tr></table></figure>
+                <h1 id="写在笔试前夜"><a href="#写在笔试前夜" class="headerlink" title="写在笔试前夜"></a>写在笔试前夜</h1><p>明天就是mihoyo春招笔试了。<br>对于在去年11月才决定进入游戏行业的我，按照现在的情况，很可能是春招第一次且最后一次的机会了。<br>说来也惭愧，一直以来都没有很深入地思考，毕业之后的生活，等真正到来了，被时间推着不得不向前的时候，却又不能接受曾经随波逐流的自己。<br>常常觉得进入社会，要考虑收入，考虑稳定，考虑家庭，但这些东西说重要也不重要。<br>在进入大学之后，我发现我在对自己诚实这件事越来越懦弱：<br>比如总是幻想自己能用很短的时间解决一些事情；<br>比如觉得别人可以这样，那我也可以这样；<br>比如社会总体上认为什么好，那就是什么好。<br>终究在实习回来进入秋招周期的某天晚上，我才意识到，我其实也是有很多想做的事情。<br>我想做属于自己的游戏，我想成为旅拍摄影师，我想在某个领域获得杰出的成就，诸如此类。<br>但总以学生的心态，觉得“学习”这件事是要放在首位的，没怎么思考过，我到底，是要学什么，积累什么。<br>结果就是，在今天并没有积累够撬开大门的知识和技能。<br>但至少在那天晚上，我找回了勇气，我愿意用最后的校园时光拼一把。<br>为此，终于开始学习unity，把脑内的想法落实，实现gameplay的经历，让我收获了名为创造的快乐，原来那是这样的爽快。<br>我深知，目前的我，可能还不够资格进入我梦想中的gameplay岗位。但现在的我也算是尽力准备了，时间倒流回24年11月重来一遍，时间长河中的我大概也只会成为今天的我，所以一切都理应发生，一切都理应是，不完美但最好的状态。</p>
+<p>所以，写在最后。希望命运这一次能眷顾我一次，我真的很想进mihoyo，参与大型游戏的开发，收获一段珍贵的经历，为日后做出自己想要的内容，打好稳固的基础。愿一切顺利。</p>
+
                 
               </div>
             
@@ -288,7 +287,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/C-Algorithm/">#C++, Algorithm</a>
+        <a href="/tags/Memo/">#Memo</a>
       
     </div>
   
@@ -300,8 +299,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>HeapSortTemplete</div>
-      <div>http://example.com/2025/02/28/HeapSortTemplete/</div>
+      <div>随记250307</div>
+      <div>http://example.com/2025/03/07/随记250307/</div>
     </div>
     <div class="license-meta">
       
@@ -313,7 +312,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>发布于</div>
-          <div>2025年2月28日</div>
+          <div>2025年3月7日</div>
         </div>
       
       
@@ -345,18 +344,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2025/03/07/%E9%9A%8F%E8%AE%B0250307/" title="随记250307">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">随记250307</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2025/02/28/MergeSortTemplete/" title="MergeSortTemplete">
-                        <span class="hidden-mobile">MergeSortTemplete</span>
+                      <a href="/2025/02/28/HeapSortTemplete/" title="HeapSortTemplete">
+                        <span class="hidden-mobile">HeapSortTemplete</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
