@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>dailyProblem250429</title>
+    <link href="/2025/04/29/dailyProblem250429/"/>
+    <url>/2025/04/29/dailyProblem250429/</url>
+    
+    <content type="html"><![CDATA[<h1 id="2962-统计最大元素出现至少-K-次的子数组"><a href="#2962-统计最大元素出现至少-K-次的子数组" class="headerlink" title="2962. 统计最大元素出现至少 K 次的子数组"></a>2962. 统计最大元素出现至少 K 次的子数组</h1><p>给你一个整数数组 nums 和一个 正整数 k 。</p><p>请你统计有多少满足 「 nums 中的 最大 元素」至少出现 k 次的子数组，并返回满足这一条件的子数组的数目。</p><p>子数组是数组中的一个连续元素序列。</p><p>示例 1：</p><p>输入：nums &#x3D; ‘[1,3,2,3,3]’, k &#x3D; 2<br>输出：6<br>解释：包含元素 3 至少 2 次的子数组为：[1,3,2,3]、[1,3,2,3,3]、[3,2,3]、[3,2,3,3]、[2,3,3] 和 [3,3] 。<br>示例 2：</p><p>输入：nums &#x3D; [1,4,2,1], k &#x3D; 3<br>输出：0<br>解释：没有子数组包含元素 4 至少 3 次。</p><p>提示：</p><p>1 &lt;&#x3D; nums.length &lt;&#x3D; ‘10^5’<br>1 &lt;&#x3D; nums[i] &lt;&#x3D; ‘10^6’<br>1 &lt;&#x3D; k &lt;&#x3D; ‘10^5’</p><h1 id="Solution"><a href="#Solution" class="headerlink" title="Solution"></a>Solution</h1><p>经典的滑动窗口模版。<br>但是个人一开始做的时候没想到确定好第一个窗口之后，怎么加上答案的数。虽然很显然左边有l个，但是右边也有合法元素。右移窗口的话好像会漏掉？</p><p>后来想明白了，只要有过一次合法，l指针就有值了。此时每次移动窗口即使当前窗口不符合条件，l指针的位置就代表新的l个子数组符合条件。</p><p>因为一开始如果没碰到合法窗口，l的初始值为0）。后面继续移动的时候，上一次合法的记录就包括了将l指针左边的所有子数组纳入，构成合法子数组。</p><pre><code class="cpp">class Solution &#123;public:    long long countSubarrays(vector&lt;int&gt;&amp; nums, int k) &#123;        int n = nums.size();        int maxnum = 0;        for(auto i:nums)&#123;            maxnum = max(maxnum,i);        &#125;        int l=0,r=0;        long long ans = 0;        int cnt = 0;        for(int i=0;i&lt;n;i++)&#123;            if(nums[i]==maxnum)&#123;                cnt++;            &#125;            while(cnt&gt;=k)&#123;                if(nums[l]==maxnum)&#123;                    cnt--;                &#125;                l++;            &#125;            ans+=l;        &#125;        return ans;    &#125;&#125;;</code></pre>]]></content>
+    
+    
+    <categories>
+      
+      <category>LeetCode</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>C++, LeetCode, DailyProblem</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>随记250410</title>
     <link href="/2025/04/10/%E9%9A%8F%E8%AE%B0250410/"/>
     <url>/2025/04/10/%E9%9A%8F%E8%AE%B0250410/</url>
