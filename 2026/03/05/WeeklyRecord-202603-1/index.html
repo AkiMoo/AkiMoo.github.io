@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
+  <link rel="icon" href="/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="AkiMo">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="20260304其实年前就想说复工之后开个周记录整理开发进度。一方面督促自己每周都做点内容稳步推进，另一方面是梳理想法让其更加有结构和条理性。 加上今天看到一篇以内部视角看毛星云自尽的文章，里面有一句话就挺印象深刻的：“周二的时候，公司替我安排了心里辅导。其实，我的内心是可以承受的，但是我总想说些什么。我告诉咨询师，我曾经回想过无数的时间节点，也许当时只要我们作出一点改变，可能今天就不会是这样的结">
+<meta property="og:type" content="article">
+<meta property="og:title" content="WeeklyRecord-202603-1">
+<meta property="og:url" content="http://example.com/2026/03/05/WeeklyRecord-202603-1/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="20260304其实年前就想说复工之后开个周记录整理开发进度。一方面督促自己每周都做点内容稳步推进，另一方面是梳理想法让其更加有结构和条理性。 加上今天看到一篇以内部视角看毛星云自尽的文章，里面有一句话就挺印象深刻的：“周二的时候，公司替我安排了心里辅导。其实，我的内心是可以承受的，但是我总想说些什么。我告诉咨询师，我曾经回想过无数的时间节点，也许当时只要我们作出一点改变，可能今天就不会是这样的结">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-05T02:01:36.000Z">
+<meta property="article:modified_time" content="2026-03-08T16:21:32.915Z">
+<meta property="article:author" content="AkiMo">
+<meta property="article:tag" content="GameMemo">
+<meta name="twitter:card" content="summary_large_image">
+  
+  
+  
+  <title>WeeklyRecord-202603-1 - Hexo</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"example.com","root":"/","version":"1.9.3","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>AkiMo&#39;s Blog</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                首页
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                归档
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                分类
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                标签
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                关于
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              &nbsp;<i class="iconfont icon-search"></i>&nbsp;
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">&nbsp;<i
+                class="iconfont icon-dark" id="color-toggle-icon"></i>&nbsp;</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="WeeklyRecord-202603-1"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2026-03-05 10:01" pubdate>
+          2026年3月5日 上午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          2.3k 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          20 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">WeeklyRecord-202603-1</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="20260304"><a href="#20260304" class="headerlink" title="20260304"></a>20260304</h1><p>其实年前就想说复工之后开个周记录整理开发进度。<br>一方面督促自己每周都做点内容稳步推进，另一方面是梳理想法让其更加有结构和条理性。</p>
+<p>加上今天看到一篇以内部视角看毛星云自尽的文章，里面有一句话就挺印象深刻的：<br>“周二的时候，公司替我安排了心里辅导。其实，我的内心是可以承受的，但是我总想说些什么。我告诉咨询师，我曾经回想过无数的时间节点，也许当时只要我们作出一点改变，可能今天就不会是这样的结局。但是她回答我：<u>每当发生这样的事情，我们都会十分懊悔和遗憾，恨自己为什么没有能够做点什么。但有时候我们真的需要去敬畏这个世界，我们并不是任何事情都能改变的。在诸多客观和主观的环境下，在种种因缘际会的作用下，并不是其中某一个选择或改变，就一定能影响到最后的结局。即便你当时做出了那样的行动，也未必能够改变最终的结果。</u>”</p>
+<p>对人对事都一样。<br>大概不能事事都这么执着？但我发自内心觉得执着是做成事情的动力前提。<br>但总归不要太结果论吧，说不定真把自己整抑郁了。</p>
+<h1 id="20260305"><a href="#20260305" class="headerlink" title="20260305"></a>20260305</h1><p>想法方面：<br>1、重力技能部分，修改成不影响角色，只影响箱子（或其他游戏交互物品）。整体玩家行动还是按照平台跳跃游戏来设计。<br>如果重力能影响到玩家，那么会大大削弱跳跃的可用性。<br>2、目前还是只有四个能力：颠倒，冻结，传送，分身。但在设计上我觉得还是要五个能力，尽可能快补充，至少idea要有。<br>————冻结区分时间冻结和空间冻结，时间冻结是对锁定箱子当前位置，十秒之后箱子复位；空间冻结是冻结箱子的位置，需要复位解除。<br>3、除去角色能力之外关卡互动还是要设计一下，比如把箱子压在上面的开关；时间切换改变地势。只加这两个点就好了。<br>工程方面：<br>1、GUI的canvas还没玩懂，可能这里才是控制游戏显示内容的大小区域以及滚动视图。<br>2、这周将主题地图模块作为主要建设任务（chapterLevelView）</p>
+<h1 id="20260308"><a href="#20260308" class="headerlink" title="20260308"></a>20260308</h1><p>说是要记录，还是没能坚持每天记。<br>这周结束了，写点东西画个句点。</p>
+<h2 id="工程方面："><a href="#工程方面：" class="headerlink" title="工程方面："></a>工程方面：</h2><p>1，考虑到关卡存档问题，重构了代码架构，将每个关卡的内容存为asset文件，这样根据索引去加载，一方面更规整，另外也能保存相应的数据了。<br>2，因为重构了代码，也不清楚是引入的还是旧有的，暂时没能排查unity报的内存泄漏问题。（长期待解决）<br>3，Player生成后还是有可视化射线？到底是图层问题还是挂载问题？不过正是因为可视化射线，才知道射线方向在不输入方向的时候默认向右，这部分是之后也要修改的。</p>
+<h2 id="想法方面："><a href="#想法方面：" class="headerlink" title="想法方面："></a>想法方面：</h2><p>1，考虑到目前的工程压力，如果再有不确定的点子加入，肯定会导致整个项目来回轱辘转。决定美术资产先随意，先将整个游戏流程完全做完，再将音效美术内容当做棉花填入框架。以我当前的能力，能实现到现在脑海中的效果我觉得也挺勉强的，所以把框架都做好了，再慢慢填充内容或许更容易能看到这个游戏面世的希望。最最最优先条件肯定还是做完，如果不够好玩，只能说当前水平有限，愿景留给将来吧。<br>2，能力费用部分，目前传送门，冻结解冻这种能力都是前后两个操作会有对应的，那这个能力的费用如何设计？要考虑一下是以操作计费还是以pair实现计费？（目前想着来说肯定是前者更好实现，但还是要考虑一下会不会引入一些问题）</p>
+<h2 id="自省"><a href="#自省" class="headerlink" title="自省"></a>自省</h2><p>说实话，我承认自己无论对人还是对事都是很倔强的，甚至算是偏执？<br>我已经不止一次怀疑我能不能把这个游戏做完了，我已经错误评估过我的工程进度无限次了。<br>甚至这周跟家人打电话的时候，还有点觉得他们不理解我，我肯定是发了脾气的，尽管我自认好像很平和。<br>我的父母，一直以来都是支持我任何事情的。</p>
+<p>可他们还有一个额外的要求，他们希望我无论做什么都能开心的活着。不管是远大志向，还是嗜好玩乐。<br>但我确实好像已经很久没有发自内心很开心了，我总感觉我在选择这条路之后，经常碰到问题先出来的心情其实是逃避。<br>我觉得他好难，好多东西学，实现脑中的想法太有挑战性了。<br>尽管科技发展的很快，我有各种工具可以使用，但是光是学习新工具或者是跟AI协同，似乎还不够提升我在工程上的实现能力。<br>我确实一开始把这件事想得太简单了，我以为无非就是一人揽程序，美术，策划的工作而已。<br>可我没想到，怎么存档这种问题我都没在一开始考虑到去设计，整体的美术风格好像大多数时候也只是靠AI蛮力而已，策划上，也有很多细节要考虑，我总觉得关卡设计他是自然而然的，但在现在调整了关卡数据架构之后，我可能之后没办法依靠图形化界面去编辑关卡了。<br>并且，我设计的关卡，必须要和能力恰到好处，一度低估了这个难度，以为我只需要在日常的琐碎时间想想就能完成这个关卡设计。</p>
+<p>结果很显然，一切都并不顺利，这大半年走来，我已经克服了不少困难了，但还是感觉前面还是有很多很多困难。<br>我是不是，真的并不像我想的那样热爱呢？</p>
+<p>我很清楚开心是一种能力，是一种看待世界的态度，明明我都已经选择这条路，明明当初顶着那么多反对的声音都坚定了这个选择。可是为什么我好像，还是没有很开心呢？<br>说不定我真的只是一个很世俗的人，只想看到顺利和成功。</p>
+<p>我知道，这些心态的事情只能自己开导自己，未来可能还是会反反复复。<br>但，就像盖亚的那首OST《光在我的体内》一样，我的心好像也有光，即使有时候他很微弱，但我好像还是会有那么一点点乐观的心境，我想和自己说我肯定能做到，走到对岸肯定是很艰辛的，我需要不断不断不断不断鼓励自己。<br>生活中其他干扰我的事情，其实真的都不重要，确实无论是感情上还是工作上我都觉得不顺心。<br>但是就如前几天看到的那样，我还不够敬畏这个世界，这个世界有太多的事情我改变不了了。<br>我太想如意，我太想顺利了，所以才会一直看着结果，一直害怕没有好的结果。</p>
+<p>但是心怀希望前进，对我来说才是，我知行合一不内耗的唯一解法。<br>希望下次再有负面情绪，我会比这次更快调整过来。<br>全世界晚安。</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/GameMemo/">#GameMemo</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>WeeklyRecord-202603-1</div>
+      <div>http://example.com/2026/03/05/WeeklyRecord-202603-1/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>AkiMo</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2026年3月5日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2026/02/02/GameMemo/" title="GameMemo">
+                        <span class="hidden-mobile">GameMemo</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header"><i class="iconfont icon-list"></i>&nbsp;目录</p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>AkiMo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Blog</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
